@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang chủ</title>
+    <!-- get font family (robonto)  -->
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto" type="text/css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/grid.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <script src="./assets/javascript/main.js"></script>
+</head>
+
+<body>
+    <main id="main">
+        <!-- Trang dau tien -->
+        <div class="main__header ">
+            <div class="main__header-overlay">
+            </div>
+            <!-- header + nav bar -->
+            <header class="header grid wide">
+                <div class="header__navbar">
+                    <div class="header__logo">
+                        <img src="./assets/images/logo.png" alt="logo" class="header__logo-img">
+                    </div>
+                    <div class="header__account">
+                        <ul class="header__list">
+                            <li class="header__item">
+                                <a href="" class="header__item-link">Đăng nhập</a>
+                            </li>
+                            <li class="header__item">
+                                <a href="" class="header__item-link">Đăng ký</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="header__navbar">
+                    <ul class="header__list">
+                        <li class="header__item">
+                            <a href="" class="header__item-link header__item-link--active">Trang chủ</a>
+                        </li>
+                        <li class="header__item">
+                            <a href="" class="header__item-link">Giải đấu</a>
+                        </li>
+                        <li class="header__item">
+                            <a href="" class="header__item-link">Đội bóng</a>
+                        </li>
+                        <li class="header__item">
+                            <a href="" class="header__item-link">Trận đấu</a>
+                        </li>
+                        <li class="header__item">
+                            <a href="" class="header__item-link">Cầu thủ</a>
+                        </li>
+                    </ul>
+                </div>
+            </header>
+            <!-- noi dung + dem nguoc ngay thi dau -->
+            <div class="header__container grid wide">
+                <div class="header__content">
+                    <h1 class="header__content-title">V - League</h1>
+                    <p class="header__content-description">Giải bóng đá quốc gia</p>
+                    <div id="header__date-countdown"></div>
+                    <a href="#" class="btn btn-primary">Tham gia</a>
+
+                </div>
+            </div>
+        </div>
+        
+        <!-- noi dung -->
+        <div class="main__container">
+            <div class="grid wide">
+                <div class="main__container-item row">
+                    <div class="next-match col col-mobile-5">
+                        <div class="table">
+                            <header class="next-match__header table-header text-left">
+                                <p class="next-match__header-text">Trận đấu tiếp theo</p>
+                            </header>
+                            <div class="next-match__content">
+                                <div class="next-match__match">
+                                    <div class="next-match__team">
+                                        <div class="next-match__team-logo">
+                                            <img src="./assets/images/HAGL.png" alt="logo team"
+                                                class="next-match__team-logo-img">
+                                        </div>
+
+                                        <p class="next-match__team-name">Hoàng Anh Gia Lai</p>
+                                    </div>
+                                    <p class="next-match__with">VS</p>
+                                    <div class="next-match__team">
+                                        <div class="next-match__team-logo">
+
+                                            <img src="./assets/images/SG.png" alt="logo team"
+                                                class="next-match__team-logo-img">
+                                        </div>
+                                        <p class="next-match__team-name">Sài Gòn</p>
+                                    </div>
+                                </div>
+                                <div class="next-match__Tournaments">
+                                    <p class="next-match__Tournaments-name">V-League</p>
+                                    <p class="next-match__Tournaments-time">Thứ 7, ngày 19 tháng 11 năm 2022
+                                        16:00 </p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rating-table col col-mobile-7">
+                        <div class="grid">
+                            <div class="table">
+                                <header class=" rating-table__header table-header">
+                                    <ul class="row no-gutters rating-table__header-list">
+                                        <li class="rating-table__header-item  col col-mobile-1 ">Hạng</li>
+                                        <li class="rating-table__header-item  col col-mobile-6 text-left">Đội</li>
+                                        <li class="rating-table__header-item  col col-mobile-1 ">Thắng</li>
+                                        <li class="rating-table__header-item  col col-mobile-1 ">Hòa</li>
+                                        <li class="rating-table__header-item  col col-mobile-1 ">Thua</li>
+                                        <li class="rating-table__header-item  col col-mobile-1 ">Hiệu số</li>
+                                        <li class="rating-table__header-item  col col-mobile-1 ">Điểm</li>
+
+                                    </ul>
+                                </header>
+                                <div class="rating-table__content">
+                                    <ul class="row no-gutters rating-table__content-list table-row">
+                                        <li class="rating-table__content-item  col col-mobile-1 ">1</li>
+                                        <li class="rating-table__content-item  col col-mobile-6 text-left">Hoàng Anh Gia
+                                            Lai</li>
+                                        <li class="rating-table__content-item  col col-mobile-1 ">12</li>
+                                        <li class="rating-table__content-item  col col-mobile-1 ">1</li>
+                                        <li class="rating-table__content-item  col col-mobile-1 ">1</li>
+                                        <li class="rating-table__content-item  col col-mobile-1 ">22</li>
+                                        <li class="rating-table__content-item  col col-mobile-1 ">37</li>
+
+                                    </ul>
+                                    <ul class="row no-gutters rating-table__content-list table-row">
+                                        <li class="rating-table__content-item  col col-mobile-1 ">2</li>
+                                        <li class="rating-table__content-item  col col-mobile-6 text-left">Hà Nội</li>
+                                        <li class="rating-table__content-item  col col-mobile-1 ">10</li>
+                                        <li class="rating-table__content-item  col col-mobile-1 ">2</li>
+                                        <li class="rating-table__content-item  col col-mobile-1 ">2</li>
+                                        <li class="rating-table__content-item  col col-mobile-1 ">26</li>
+                                        <li class="rating-table__content-item  col col-mobile-1 ">32</li>
+
+                                    </ul>
+                                    <ul class="row no-gutters rating-table__content-list table-row">
+                                        <li class="rating-table__content-item  col col-mobile-1 ">3</li>
+                                        <li class="rating-table__content-item  col col-mobile-6 text-left">Viettel</li>
+                                        <li class="rating-table__content-item  col col-mobile-1 ">8</li>
+                                        <li class="rating-table__content-item  col col-mobile-1 ">6</li>
+                                        <li class="rating-table__content-item  col col-mobile-1 ">1</li>
+                                        <li class="rating-table__content-item  col col-mobile-1 ">18</li>
+                                        <li class="rating-table__content-item  col col-mobile-1 ">30</li>
+
+                                    </ul>
+                                    <ul class="row no-gutters rating-table__content-list table-row">
+                                        <li class="rating-table__content-item  col col-mobile-1 ">4</li>
+                                        <li class="rating-table__content-item  col col-mobile-6 text-left">TP.HCM</li>
+                                        <li class="rating-table__content-item  col col-mobile-1 ">9</li>
+                                        <li class="rating-table__content-item  col col-mobile-1 ">2</li>
+                                        <li class="rating-table__content-item  col col-mobile-1 ">4</li>
+                                        <li class="rating-table__content-item  col col-mobile-1 ">10</li>
+                                        <li class="rating-table__content-item  col col-mobile-1 ">29</li>
+
+                                    </ul>
+                                    <ul class="row no-gutters rating-table__content-list table-row">
+                                        <li class="rating-table__content-item  col col-mobile-1 ">5</li>
+                                        <li class="rating-table__content-item  col col-mobile-6 text-left">Sông Lam Nghệ
+                                            An</li>
+                                        <li class="rating-table__content-item  col col-mobile-1 ">8</li>
+                                        <li class="rating-table__content-item  col col-mobile-1 ">2</li>
+                                        <li class="rating-table__content-item  col col-mobile-1 ">4</li>
+                                        <li class="rating-table__content-item  col col-mobile-1 ">0</li>
+                                        <li class="rating-table__content-item  col col-mobile-1 ">26</li>
+
+                                    </ul>
+                                    <ul class="row no-gutters rating-table__content-list table-row">
+                                        <li class="rating-table__content-item  col col-mobile-1 ">6</li>
+                                        <li class="rating-table__content-item  col col-mobile-6 text-left">SHB Đà Năng
+                                        </li>
+                                        <li class="rating-table__content-item  col col-mobile-1 ">6</li>
+                                        <li class="rating-table__content-item  col col-mobile-1 ">4</li>
+                                        <li class="rating-table__content-item  col col-mobile-1 ">4</li>
+                                        <li class="rating-table__content-item  col col-mobile-1 ">11</li>
+                                        <li class="rating-table__content-item  col col-mobile-1 ">22</li>
+
+                                    </ul>
+                                    <ul class="row no-gutters rating-table__content-list table-row">
+                                        <li class="rating-table__content-item  col col-mobile-1 ">7</li>
+                                        <li class="rating-table__content-item  col col-mobile-6 text-left">Nam Định</li>
+                                        <li class="rating-table__content-item  col col-mobile-1 ">6</li>
+                                        <li class="rating-table__content-item  col col-mobile-1 ">3</li>
+                                        <li class="rating-table__content-item  col col-mobile-1 ">5</li>
+                                        <li class="rating-table__content-item  col col-mobile-1 ">4</li>
+                                        <li class="rating-table__content-item  col col-mobile-1 ">21</li>
+
+                                    </ul>
+                                    <ul class="row no-gutters rating-table__content-list table-row">
+                                        <li class="rating-table__content-item  col col-mobile-1 ">8</li>
+                                        <li class="rating-table__content-item  col col-mobile-6 text-left">Becamex Bình
+                                            Dương</li>
+                                        <li class="rating-table__content-item  col col-mobile-1 ">6</li>
+                                        <li class="rating-table__content-item  col col-mobile-1 ">3</li>
+                                        <li class="rating-table__content-item  col col-mobile-1 ">5</li>
+                                        <li class="rating-table__content-item  col col-mobile-1 ">0</li>
+                                        <li class="rating-table__content-item  col col-mobile-1 ">21</li>
+
+                                    </ul>
+                                    <ul class="row no-gutters rating-table__content-list table-row">
+                                        <li class="rating-table__content-item  col col-mobile-1 ">9</li>
+                                        <li class="rating-table__content-item  col col-mobile-6 text-left">Hải Phòng
+                                        </li>
+                                        <li class="rating-table__content-item  col col-mobile-1 ">5</li>
+                                        <li class="rating-table__content-item  col col-mobile-1 ">4</li>
+                                        <li class="rating-table__content-item  col col-mobile-1 ">6</li>
+                                        <li class="rating-table__content-item  col col-mobile-1 ">-2</li>
+                                        <li class="rating-table__content-item  col col-mobile-1 ">19</li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="main__container-item row ">
+                    <div class="col col-mobile-12 grid">
+                        <div class="rating-player table">
+                            <header class="rating-player__header table-header">
+                                <ul class="rating-player__header-list row  no-gutters">
+                                    <li class="rating-player__header-item col col-mobile-1">
+                                        <div class="rating-play__header-item-title">STT</div>
+                                        <div class="rating-player__header-item-control">
+                                            <i class="rating-player__header-item-control-icon fa-solid fa-angle-up"></i>
+                                            <i class="rating-player__header-item-control-icon fa-solid fa-angle-down"></i>
+                                        </div>
+                                    </li>
+                                    <li class="rating-player__header-item col col-mobile-3">
+                                        <div class="rating-play__header-item-title">Tên cầu thủ</div>
+                                        <div class="rating-player__header-item-control">
+                                            <i class="rating-player__header-item-control-icon fa-solid fa-angle-up"></i>
+                                            <i class="rating-player__header-item-control-icon fa-solid fa-angle-down"></i>
+                                        </div>
+                                    </li>
+                                    <li class="rating-player__header-item col col-mobile-3">
+                                        <div class="rating-play__header-item-title">Đội bóng</div>
+                                        <div class="rating-player__header-item-control">
+                                            <i class="rating-player__header-item-control-icon fa-solid fa-angle-up"></i>
+                                            <i class="rating-player__header-item-control-icon fa-solid fa-angle-down"></i>
+                                        </div>
+                                        
+                                    </li>
+                                    <li class="rating-player__header-item col col-mobile-2">
+                                        <div class="rating-play__header-item-title">Vị trí</div>
+                                        <div class="rating-player__header-item-control">
+                                            <i class="rating-player__header-item-control-icon fa-solid fa-angle-up"></i>
+                                            <i class="rating-player__header-item-control-icon fa-solid fa-angle-down"></i>
+                                        </div>
+                                    </li>
+                                    <li class="rating-player__header-item col col-mobile-3">
+                                        <div class="rating-play__header-item-title">Tổng số bàn thắng</div>
+                                        <div class="rating-player__header-item-control">
+                                            <i class="rating-player__header-item-control-icon fa-solid fa-angle-up"></i>
+                                            <i class="rating-player__header-item-control-icon fa-solid fa-angle-down"></i>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </header>
+                            <div class="rating-player__content">
+                                <ul class="rating-player__contenr-list row table-row no-gutters">
+                                    <li class="rating-player__contenr-item col col-mobile-1">1</li>
+                                    <li class="rating-player__contenr-item col col-mobile-3">Rimario Allando Gordon</li>
+                                    <li class="rating-player__contenr-item col col-mobile-3">Hải phòng</li>
+                                    <li class="rating-player__contenr-item col col-mobile-2">Tiền đạo</li>
+                                    <li class="rating-player__contenr-item col col-mobile-3">17</li>
+                                </ul>
+                                <ul class="rating-player__contenr-list row table-row no-gutters">
+                                    <li class="rating-player__contenr-item col col-mobile-1">2</li>
+                                    <li class="rating-player__contenr-item col col-mobile-3">Phạm Tuấn Hải</li>
+                                    <li class="rating-player__contenr-item col col-mobile-3">Hà Nội</li>
+                                    <li class="rating-player__contenr-item col col-mobile-2">Tiền đạo</li>
+                                    <li class="rating-player__contenr-item col col-mobile-3">8</li>
+                                </ul>
+                                <ul class="rating-player__contenr-list row table-row no-gutters">
+                                    <li class="rating-player__contenr-item col col-mobile-1">3</li>
+                                    <li class="rating-player__contenr-item col col-mobile-3">Geovane Magno</li>
+                                    <li class="rating-player__contenr-item col col-mobile-3">Viettel</li>
+                                    <li class="rating-player__contenr-item col col-mobile-2">Tiền đạo</li>
+                                    <li class="rating-player__contenr-item col col-mobile-3">8</li>
+                                </ul>
+                                <ul class="rating-player__contenr-list row table-row no-gutters">
+                                    <li class="rating-player__contenr-item col col-mobile-1">4</li>
+                                    <li class="rating-player__contenr-item col col-mobile-3">Jermie Dwayne Lynch</li>
+                                    <li class="rating-player__contenr-item col col-mobile-3">Topenland Bình Định</li>
+                                    <li class="rating-player__contenr-item col col-mobile-2">Tiền đạo</li>
+                                    <li class="rating-player__contenr-item col col-mobile-3">8</li>
+                                </ul>
+                                <ul class="rating-player__contenr-list row table-row no-gutters">
+                                    <li class="rating-player__contenr-item col col-mobile-1">5</li>
+                                    <li class="rating-player__contenr-item col col-mobile-3">Nguyễn Tiến Linh</li>
+                                    <li class="rating-player__contenr-item col col-mobile-3">Becamex Bình Dương</li>
+                                    <li class="rating-player__contenr-item col col-mobile-2">Tiền đạo</li>
+                                    <li class="rating-player__contenr-item col col-mobile-3">8</li>
+                                </ul>
+                                <ul class="rating-player__contenr-list row table-row no-gutters">
+                                    <li class="rating-player__contenr-item col col-mobile-1">6</li>
+                                    <li class="rating-player__contenr-item col col-mobile-3">Paollo Madeira Oliveira
+                                    </li>
+                                    <li class="rating-player__contenr-item col col-mobile-3">Hồng Lĩnh Hà Tĩnh</li>
+                                    <li class="rating-player__contenr-item col col-mobile-2">Tiền đạo</li>
+                                    <li class="rating-player__contenr-item col col-mobile-3">7</li>
+                                </ul>
+                                <ul class="rating-player__contenr-list row table-row no-gutters">
+                                    <li class="rating-player__contenr-item col col-mobile-1">7</li>
+                                    <li class="rating-player__contenr-item col col-mobile-3">Jose Paulo De Oliveira
+                                        PintoPaollo
+                                        Madeira Oliveira</li>
+                                    <li class="rating-player__contenr-item col col-mobile-3">Đông Á Thanh Hóa</li>
+                                    <li class="rating-player__contenr-item col col-mobile-2">Tiền vệ</li>
+                                    <li class="rating-player__contenr-item col col-mobile-3">7</li>
+                                </ul>
+                                <ul class="rating-player__contenr-list row table-row no-gutters">
+                                    <li class="rating-player__contenr-item col col-mobile-1">8</li>
+                                    <li class="rating-player__contenr-item col col-mobile-3">Nguyễn Văn Quyết</li>
+                                    <li class="rating-player__contenr-item col col-mobile-3">Hà Nội</li>
+                                    <li class="rating-player__contenr-item col col-mobile-2">Tiền đạo</li>
+                                    <li class="rating-player__contenr-item col col-mobile-3">6</li>
+                                </ul>
+                                <ul class="rating-player__contenr-list row table-row no-gutters">
+                                    <li class="rating-player__contenr-item col col-mobile-1">9</li>
+                                    <li class="rating-player__contenr-item col col-mobile-3">Hendrio Araujo Dasilva</li>
+                                    <li class="rating-player__contenr-item col col-mobile-3">Topenland Bình Định</li>
+                                    <li class="rating-player__contenr-item col col-mobile-2">Tiền vệ</li>
+                                    <li class="rating-player__contenr-item col col-mobile-3">6</li>
+                                </ul>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="pagination left ">
+                    <ul class="pagination__list">
+                        <li class="pagination__item">
+
+                            <a class="pagination__item-link pagination__item-link--no-click ">
+                                <i class="fa-solid fa-angle-left"></i></a>
+                        </li>
+                        <li class="pagination__item">
+                            <a class="pagination__item-link pagination__item-link--active">01</a>
+                        </li>
+                        <li class="pagination__item"> <a class="pagination__item-link">02</a></li>
+                        <li class="pagination__item"><a class="pagination__item-link">03</a></li>
+                        <li class="pagination__item"><a class="pagination__item-link">04</a></li>
+                        <li class="pagination__item"> <a class="pagination__item-link">05</a></li>
+                        <li class="pagination__item"><a class="pagination__item-link">...</a></li>
+                        <li class="pagination__item"> <a class="pagination__item-link">24</a></li>
+                        <li class="pagination__item">
+                            <a class="pagination__item-link"><i class="fa-solid fa-angle-right"></i></a>
+                        </li>
+
+
+
+
+
+
+
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
