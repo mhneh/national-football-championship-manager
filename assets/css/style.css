@@ -226,7 +226,7 @@
 /* cái nền màu đen đen ở dưới cái bảng =))))) (duy)*/
 .bg_2
 {
-    background-color:var(--bg-2);
+    background-color: rgba(0, 0, 0, 0.4);
     /* opacity: 0.5; */
     width: 80%;
     height: 85%;
@@ -241,3 +241,46 @@
     padding: 20px 0;
 }
 
+/* trang thay đổi quy định (duy)*/
+.bg_2 h2{
+    
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--white-color);
+    padding: 0 0 0 30px;
+}
+.form__group{
+    margin: 20px 0 0 30px;
+    font-size: 1.5rem;
+    color: var(--white-color);
+}
+
+.form__input1{
+    width: 120px;
+    height: 30px;
+    color: var(--white-color);
+    font-size: 1.2rem;
+    margin:20px 0 0 15px;
+    padding: 5px;
+    border-radius: 8px;
+    border: 1px solid var(--white-color);
+}
+.form__input2{
+    width: 260px;
+    height: 30px;
+    color: var(--white-color);
+    font-size: 1.2rem;
+    margin:20px 0 0 15px;
+    padding: 5px;
+    border-radius: 8px;
+    border: 1px solid var(--white-color);
+}
+.priority{
+    width: 75px;
+    height: 30px;
+    font-size: 1.2rem;
+    margin:20px 0 0 15px;
+    padding: 5px;
+    border-radius: 8px;
+    border: 1px solid var(--white-color);
+}
