@@ -7,6 +7,9 @@
     --primary-color: #ee1e46;
     --border-color: #dbdbdb;
     --star-gold-color: #FFCE3E;
+    --table-background-color: #222831; /* màu nền của bảng (duy) */
+    --green-color: #16ad25; /* màu xanh lá cây (duy) */
+    --bg-2: #3c3a3a;
     
 }
 
@@ -35,12 +38,25 @@ html{
     left: 1px;
 }
 .main__container{
-    background-color: #222831;
+    background-color: var(--table-background-color);
     padding: 50px 0 ;
+    text-align: center;
 }
 .left{
     float: left;
 }
+/* duy */
+.center{
+    text-align: center;
+}
+
+.main__content{
+    display: flex;
+    justify-content: center;
+    /* The content is above */
+    position: relative;
+}
+
 /* button */
 .btn{
     display: block;
@@ -139,4 +155,9 @@ html{
 }
 .pagination__item-link--no-click:hover{
     opacity: 1;
+}
+
+/* tô màu nền của bảng (duy) */
+.table-row{
+    background-color: var(--table-background-color);
 }
