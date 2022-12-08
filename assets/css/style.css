@@ -258,7 +258,6 @@
 .form__input1{
     width: 120px;
     height: 30px;
-    color: var(--white-color);
     font-size: 1.2rem;
     margin:20px 0 0 15px;
     padding: 5px;
@@ -268,7 +267,6 @@
 .form__input2{
     width: 260px;
     height: 30px;
-    color: var(--white-color);
     font-size: 1.2rem;
     margin:20px 0 0 15px;
     padding: 5px;
@@ -278,7 +276,6 @@
 .form__input3{
     width: 150px;
     height: 30px;
-    color: var(--white-color);
     font-size: 1.2rem;
     margin:20px 0 0 15px;
     padding: 5px;
@@ -288,7 +285,6 @@
 .form__input4{
     width: 315px;
     height: 30px;
-    color: var(--white-color);
     font-size: 1.2rem;
     margin:20px 0 0 15px;
     padding: 5px;
@@ -298,13 +294,41 @@
 .form__input5{
     width: 92px;
     height: 30px;
-    color: var(--white-color);
     font-size: 1.2rem;
     margin:20px 0 0 15px;
     padding: 5px;
     border-radius: 8px;
     border: 1px solid var(--white-color);
 }
+.form__input6{
+    width: 350px;
+    height: 30px;
+    font-size: 1.2rem;
+    margin-top: 5px;
+    padding: 5px;
+    border-radius: 8px;
+    border: 1px solid var(--white-color);
+}
+
+.form__input7{
+    width:165px;
+    height: 30px;
+    font-size: 1.2rem;
+    margin-top: 5px;
+    padding: 5px;
+    border-radius: 8px;
+    border: 1px solid var(--white-color);
+}
+.square{
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    border-radius: 8px;
+    border: 1px solid var(--white-color);
+    text-align: center;
+    margin-top: 5px;
+}
+
 .priority{
     width: 75px;
     height: 30px;
