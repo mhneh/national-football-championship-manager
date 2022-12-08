@@ -275,6 +275,36 @@
     border-radius: 8px;
     border: 1px solid var(--white-color);
 }
+.form__input3{
+    width: 150px;
+    height: 30px;
+    color: var(--white-color);
+    font-size: 1.2rem;
+    margin:20px 0 0 15px;
+    padding: 5px;
+    border-radius: 8px;
+    border: 1px solid var(--white-color);
+}
+.form__input4{
+    width: 315px;
+    height: 30px;
+    color: var(--white-color);
+    font-size: 1.2rem;
+    margin:20px 0 0 15px;
+    padding: 5px;
+    border-radius: 8px;
+    border: 1px solid var(--white-color);
+}
+.form__input5{
+    width: 92px;
+    height: 30px;
+    color: var(--white-color);
+    font-size: 1.2rem;
+    margin:20px 0 0 15px;
+    padding: 5px;
+    border-radius: 8px;
+    border: 1px solid var(--white-color);
+}
 .priority{
     width: 75px;
     height: 30px;
@@ -283,4 +313,18 @@
     padding: 5px;
     border-radius: 8px;
     border: 1px solid var(--white-color);
+}
+
+.bg_green{
+    background-color: var(--green-color);
+}
+.submit{
+    border: none;
+    margin:50px;
+    width: 100px;
+    height: 40px;
+    border-radius: 8px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: var(--white-color);
 }
