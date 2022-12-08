@@ -92,6 +92,13 @@ html{
     text-align: center;
 
 }
+/* Header */
+.header__account--no-active{
+    /* display: none; */
+}
+.header__account--active{
+    display: none;
+}
 .header__item-control{
     display: inline-block;
     display: flex;
