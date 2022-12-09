@@ -247,7 +247,10 @@
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--white-color);
-    padding: 0 0 0 30px;
+    /* padding: 0 0 0 30px; */
+    margin: 15px;
+
+    margin-left: 8.3333333%;
 }
 .form__group{
     margin: 20px 0 0 30px;
@@ -319,6 +322,25 @@
     border-radius: 8px;
     border: 1px solid var(--white-color);
 }
+.form__input8{
+    width:200px;
+    height: 30px;
+    font-size: 1.2rem;
+    margin-top: 5px;
+    padding: 5px;
+    border-radius: 8px;
+    border: 1px solid var(--white-color);
+}
+.form__input9{
+    width:100px;
+    height: 30px;
+    font-size: 1.2rem;
+    margin-top: 5px;
+    margin-left: 20px;
+    padding: 5px;
+    border-radius: 8px;
+    border: 1px solid var(--white-color);
+}
 .square{
     width: 30px;
     height: 30px;
@@ -344,11 +366,26 @@
 }
 .submit{
     border: none;
-    margin:50px;
+    margin:45px;
     width: 100px;
     height: 40px;
     border-radius: 8px;
     font-size: 1.4rem;
     font-weight: bold;
     color: var(--white-color);
+    cursor: pointer;
+}
+
+/* nút thêm */
+.btn__add{
+    width: 30px;
+    height: 30px;
+    border-radius: 8px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: var(--white-color);
+    cursor: pointer;
+    background-color: var(--green-color);
+    border: none;
+    margin: 0 0 0 30px;
 }

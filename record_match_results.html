@@ -115,16 +115,83 @@
 
                         </div>
                     </div>
-                    
+
                     <div>
                         <h2>Danh sách các cầu thủ ghi bàn</h2>
-                        
+                        <!-- nhap danh sach cau thi ghi ban -->
+                        <div class="regis-file__container-item">
+                            <div class="col col-mobile-12 grid">
+                                <div class="rating-player table">
+                                    <header class="rating-player__header table-header">
+                                        <ul class="rating-player__header-list row  no-gutters">
+                                            <li class="rating-player__header-item col col-mobile-1">
+                                                <div class="rating-play__header-item-title">STT</div>
+                                            </li>
+                                            <li class="rating-player__header-item col col-mobile-3">
+                                                <div class="rating-play__header-item-title">Cầu thủ</div>
+                                            </li>
+                                            <li class="rating-player__header-item col col-mobile-3">
+                                                <div class="rating-play__header-item-title">Đội</div>
+                                            </li>
+                                            <li class="rating-player__header-item col col-mobile-2">
+                                                <div class="rating-play__header-item-title">Loại bàn thắng</div>
+                                            </li>
+                                            <li class="rating-player__header-item col col-mobile-3">
+                                                <div class="rating-play__header-item-title">Thời điểm</div>
+                                            </li>
+                                        </ul>
+                                    </header>
+
+                                    <div class="rating-player__content">
+                                        <ul class="rating-player__contenr-list row table-row no-gutters">
+                                            <li class="rating-player__contenr-item col col-mobile-1">1</li>
+    
+                                            <li class=" rating-player__contenr-item col col-mobile-3">
+                                                <!-- <div class="rating-player__contenr-item-title">Nguyễn Văn A</div> -->
+                                                <input class="form__input8" type="text" id="name_of_player"
+                                                    name="name_of_player" placeholder="Nhập tên cầu thủ">
+                                               
+                                            </li>
+                                            
+                                            <li class="rating-player__contenr-item col col-mobile-3">
+                                                <!-- <div class="rating-player__contenr-item-title">Đội 1</div> -->
+                                                <input class="form__input8" type="text" id="name_of_team"
+                                                    name="name_of_team" placeholder="Nhập tên đội">
+                                            </li>
+
+                                            <li class="rating-player__contenr-item col col-mobile-2">
+                                                <select class="form__input8" name="type_of_goal" id="type_of_goal">
+                                                    <option value="0">Chọn loại bàn thắng</option>
+                                                    <option value="1">Bàn thắng bóng sống</option>
+                                                    <option value="2">Bàn thắng đá phạt, phạt đền</option>
+                                                    <option value="3">Bàn thắng phản lưới</option>
+                                                </select>
+                                            </li>
+
+                                            <li class="rating-player__contenr-item col col-mobile-3">
+                                                <input class="form__input9" type="text" id="time_of_goal"
+                                                    name="time_of_goal" placeholder="Nhập thời điểm">
+                                        </ul>
+                                        <ul class="table-row">
+                                            <li>
+                                                <button class="btn__add">+</button>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
                     </div>
 
+
+                    <div class="center">
+                        <input class="bg_green submit " type="submit" value="Lưu">
+                    </div>
                 </div>
             </div>
-
-
+        </div>
     </main>
 </body>
 
