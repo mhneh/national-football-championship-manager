@@ -1,78 +1,6 @@
-.main__header{
-    height: 100vh;
-    min-height: 500px;
-    background-image: url(../images/bg_3.jpg) ;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
+/* user active */
+.header__account--no-active{
     display: flex;
-    flex-direction: column;
-}
-.main__header-overlay{
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-}
-/* Header navbar */
-.header{
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    top: 10px;
-}
-.header__navbar{
-    display: flex;
-    justify-content: space-between;
-}
-
-.header__logo-img{
-    opacity: 0.4;
-    width: 100px;
-}
-.header__account{
-    float: right;
-}
-.header__account .header__item-link{
-    font-size: 1.2rem;
-    font-weight: normal;
-    color: rgba(255, 255, 255, 0.5)
-}
-.header__account .header__item-link:hover{
-    color:var(--primary-color);
-}
-
-.header__list{
-    display: flex;
-    flex:1;
-    list-style: none;
-    position: relative;
-    z-index: 1;
-    justify-content: center;
-}
-.header__item-link{
-    display: block;
-    text-decoration: none;
-    color: var(--white-color);
-    font-size: 1.6rem;
-    position: relative;
-    font-weight: 400;
-}
-.header__navbar > .header__list > .header__item > .header__item-link:hover::after{
-    position: absolute;
-    content: "";
-    border-bottom: 2px var(--white-color) solid;
-    width: 100%;
-    top:calc(100% + 2px);
-    left: 1px;
-}
-.header__item + .header__item{
-    margin-left: 50px;
-}
-.header__account .header__item{
-    margin-left: 20px;
 }
 /* countdown */
 .header__container{
@@ -105,6 +33,11 @@
 }
 
 /* container */
+.main__container{
+    /* background-color: #222831; */
+    background-color: var(--background-color);
+    padding: 50px 0 ;
+}
 /* bang tran dau tiep theo */
 .main__container-item{
     margin: 50px 0;
@@ -153,11 +86,12 @@
 }
 .next-match__Tournaments-time{
     font-size: 1.3rem;
-    color: var(--text-color);
+    line-height: 1.6rem;
+    color: rgba(255, 255, 255, 0.5);
 }
-.next-match__Tournaments-time,.next-match__Tournaments-name{
-    height: 30px;
-    line-height: 30px;
+.next-match__Tournaments-name{
+    height: 40px;
+    line-height: 40px;
     
 }
 .rating-player__header-item {
