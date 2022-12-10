@@ -15,7 +15,7 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  margin: 20px;
+  margin: 0 20px;
 }
 
 .search-form__form-input {
