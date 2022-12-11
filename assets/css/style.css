@@ -284,6 +284,9 @@
     font-size: 13px;
     margin-top: -6px;
     line-height: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 380px;
 }
 
 .signup {
@@ -301,13 +304,13 @@
 }
 .signup__form {
     position: absolute;
-    margin-top: 40px;
+    margin-top: 30px;
 }
 .signup__form-box{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    height: 350px;
+    height: 400px;
     width: 950px;
     justify-content: space-between;
     align-content: space-between;
@@ -339,7 +342,7 @@
     font-weight: 700;
     font-size: 20px;
     line-height: 20px;
-    margin-top: 40px;
+    margin-top: 25px;
     right: 280px;
     border: none;
     margin-left: 300px;
@@ -351,7 +354,7 @@
     font-size: 12px;
     color: white;
     z-index: 1;
-    margin-top:490px;
+    margin-top:510px;
 }
 .reset {
     display: flex;
