@@ -176,6 +176,11 @@ html{
     position: relative;
     font-weight: 400;
 }
+.header__navbar > .header__list > .header__item > .header__item-link:hover{
+    color: white !important;
+    top: -2px;
+    transition: ease-in 0.5s;
+}
 .header__navbar > .header__list > .header__item > .header__item-link:hover::after{
     position: absolute;
     content: "";
