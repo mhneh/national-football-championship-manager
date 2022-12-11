@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/grid.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
-    <script src="./assets/javascript/main.js"></script>
+    
 </head>
 
 <body>
@@ -68,14 +68,14 @@
                             <div class="col col-mobile-4 col-mobile-offset-1">
                                 <label for="name_of_team1">Đội 1</label> <br>
                                 <input class="form__input6" type="text" id="name_of_team1" name="name_of_team1"
-                                    placeholder="Nhập tên đội 1">
+                                    placeholder="Nhập tên đội 1" required>
                             </div>
 
                             <div class="col col-mobile-4 col-mobile-offset-2">
 
                                 <label for="name_of_team2">Đội 2</label> <br>
                                 <input class="form__input6" type="text" id="name_of_team2" name="name_of_team2"
-                                    placeholder="Nhập tên đội 2">
+                                    placeholder="Nhập tên đội 2" required>
                             </div>
 
                         </div>
@@ -139,49 +139,19 @@
                                     </header>
 
                                     <div class="rating-player__content">
-                                        <ul class="rating-player__contenr-list row table-row no-gutters">
-                                            <li class="rating-player__contenr-item col col-mobile-1">1</li>
-    
-                                            <li class=" rating-player__contenr-item col col-mobile-3">
-                                                <!-- <div class="rating-player__contenr-item-title">Nguyễn Văn A</div> -->
-                                                <input class="form__input8" type="text" id="name_of_player"
-                                                    name="name_of_player" placeholder="Nhập tên cầu thủ">
-                                               
-                                            </li>
-                                            
-                                            <li class="rating-player__contenr-item col col-mobile-3">
-                                                <!-- <div class="rating-player__contenr-item-title">Đội 1</div> -->
-                                                <input class="form__input8" type="text" id="name_of_team"
-                                                    name="name_of_team" placeholder="Nhập tên đội">
-                                            </li>
-
-                                            <li class="rating-player__contenr-item col col-mobile-2">
-                                                <select class="form__input8" name="type_of_goal" id="type_of_goal">
-                                                    <option value="0">Chọn loại bàn thắng</option>
-                                                    <option value="1">Bàn thắng bóng sống</option>
-                                                    <option value="2">Bàn thắng đá phạt, phạt đền</option>
-                                                    <option value="3">Bàn thắng phản lưới</option>
-                                                </select>
-                                            </li>
-
-                                            <li class="rating-player__contenr-item col col-mobile-3">
-                                                <input class="form__input9" type="text" id="time_of_goal"
-                                                    name="time_of_goal" placeholder="Nhập thời điểm">
-                                        </ul>
+                                        
                                         <ul class="table-row">
                                             <li>
-                                                <button class="btn__add">+</button>
+                                                <button class="btn__add">Thêm</button>
+                                                <button class="btn__remove">Xoá</button>
                                             </li>
                                         </ul>
+
                                     </div>
                                 </div>
-
-
                             </div>
                         </div>
                     </div>
-
-
                     <div class="center">
                         <input class="bg_green submit " type="submit" value="Lưu">
                     </div>
@@ -189,6 +159,7 @@
             </div>
         </div>
     </main>
+    <script src="./assets/javascript/record_match_results.js"></script>
 </body>
 
 </html>

@@ -192,8 +192,8 @@
 }
 
 /* nút thêm */
-.btn__add{
-    width: 30px;
+.btn__add,.btn__remove{
+    width:80px;
     height: 30px;
     border-radius: 8px;
     font-size: 1.4rem;
