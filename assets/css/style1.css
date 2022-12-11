@@ -253,6 +253,7 @@
     color: red;
 }
 .login__form-btn {
+    cursor: pointer;
     padding: 12px 140px;
     border-radius: 10px;
     background-color: rgba(22, 173, 37, 1);
@@ -333,6 +334,7 @@
     font-size: 14px;
 }
 .signup__form-btn {
+    cursor: pointer;
     padding: 12px 140px;
     border-radius: 10px;
     background-color: rgba(22, 173, 37, 1);
@@ -383,6 +385,7 @@
     font-size: 14px;
 }
 .reset__form-btn {
+    cursor: pointer;
     padding: 12px 100px;
     border-radius: 10px;
     background-color: rgba(22, 173, 37, 1);
