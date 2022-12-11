@@ -1,5 +1,5 @@
 /* danh sách hồ sơ đăng ký (duy) */
-.logo-in-table{
+.logo-in-table {
     width: 25px;
     margin: 0 auto;
     display: flex;
@@ -7,18 +7,18 @@
     align-items: center;
 }
 
-.logo-in-table img{
+.logo-in-table img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     padding: auto;
 }
 
-.cell{
+.cell {
     padding: 5px;
 }
 
-.view-profile{
+.view-profile {
     width: 100%;
     height: 100%;
     display: flex;
@@ -28,20 +28,20 @@
     color: var(--green-color);
     font-weight: bold;
 }
-.view-profile:hover{
+
+.view-profile:hover {
     color: var(--green-color);
     text-decoration: underline;
 
 }
 
-.regis-file__container-item{
+.regis-file__container-item {
     margin: 10px 50px 50px 50px;
 }
 
 
 /* cái nền màu đen đen ở dưới cái bảng =))))) (duy)*/
-.bg_2
-{
+.bg_2 {
     background-color: rgba(0, 0, 0, 0.4);
     /* opacity: 0.5; */
     width: 80%;
@@ -49,16 +49,18 @@
     margin: 50px 0 0 0;
 
 }
-.bg_2 h1{
+
+.bg_2 h1 {
     text-align: center;
     font-size: 2rem;
     font-weight: 700;
     color: var(--white-color);
     padding: 20px 0;
 }
+
 /* trang thay đổi quy định (duy)*/
-.bg_2 h2{
-    
+.bg_2 h2 {
+
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--white-color);
@@ -67,58 +69,64 @@
 
     margin-left: 8.3333333%;
 }
-.form__group{
+
+.form__group {
     margin: 20px 0 0 30px;
     font-size: 1.5rem;
     color: var(--white-color);
 }
 
-.form__input1{
+.form__input1 {
     width: 120px;
     height: 30px;
     font-size: 1.2rem;
-    margin:20px 0 0 15px;
+    margin: 20px 0 0 15px;
     padding: 5px;
     border-radius: 8px;
     border: 1px solid var(--white-color);
 }
-.form__input2{
+
+.form__input2 {
     width: 260px;
     height: 30px;
     font-size: 1.2rem;
-    margin:20px 0 0 15px;
+    margin: 20px 0 0 15px;
     padding: 5px;
     border-radius: 8px;
     border: 1px solid var(--white-color);
 }
-.form__input3{
+
+.form__input3 {
     width: 150px;
     height: 30px;
     font-size: 1.2rem;
-    margin:20px 0 0 15px;
+    margin: 20px 0 0 15px;
     padding: 5px;
     border-radius: 8px;
     border: 1px solid var(--white-color);
 }
-.form__input4{
+
+.form__input4 {
     width: 315px;
     height: 30px;
     font-size: 1.2rem;
-    margin:20px 0 0 15px;
+    margin: 20px 0 0 15px;
     padding: 5px;
     border-radius: 8px;
     border: 1px solid var(--white-color);
 }
-.form__input5{
+
+.form__input5 {
     width: 92px;
     height: 30px;
     font-size: 1.2rem;
-    margin:20px 0 0 15px;
+    margin: 20px 0 0 15px;
     padding: 5px;
     border-radius: 8px;
     border: 1px solid var(--white-color);
 }
-.form__input6{
+
+.form__input6 {
     width: 350px;
     height: 30px;
     font-size: 1.2rem;
@@ -128,8 +136,8 @@
     border: 1px solid var(--white-color);
 }
 
-.form__input7{
-    width:165px;
+.form__input7 {
+    width: 165px;
     height: 30px;
     font-size: 1.2rem;
     margin-top: 5px;
@@ -137,8 +145,9 @@
     border-radius: 8px;
     border: 1px solid var(--white-color);
 }
-.form__input8{
-    width:200px;
+
+.form__input8 {
+    width: 200px;
     height: 30px;
     font-size: 1.2rem;
     margin-top: 5px;
@@ -146,8 +155,9 @@
     border-radius: 8px;
     border: 1px solid var(--white-color);
 }
-.form__input9{
-    width:100px;
+
+.form__input9 {
+    width: 100px;
     height: 30px;
     font-size: 1.2rem;
     margin-top: 5px;
@@ -156,7 +166,8 @@
     border-radius: 8px;
     border: 1px solid var(--white-color);
 }
-.square{
+
+.square {
     width: 30px;
     height: 30px;
     padding: 5px;
@@ -166,22 +177,23 @@
     margin-top: 5px;
 }
 
-.priority{
+.priority {
     width: 75px;
     height: 30px;
     font-size: 1.2rem;
-    margin:20px 0 0 15px;
+    margin: 20px 0 0 15px;
     padding: 5px;
     border-radius: 8px;
     border: 1px solid var(--white-color);
 }
 
-.bg_green{
+.bg_green {
     background-color: var(--green-color);
 }
-.submit{
+
+.submit {
     border: none;
-    margin:45px;
+    margin: 45px;
     width: 100px;
     height: 40px;
     border-radius: 8px;
@@ -192,7 +204,7 @@
 }
 
 /* nút thêm */
-.btn__add{
+.btn__add {
     width: 30px;
     height: 30px;
     border-radius: 8px;
@@ -204,10 +216,45 @@
     border: none;
     margin: 0 0 0 30px;
 }
+
 /* đọi bóng */
-.form__group textarea{
+.form__group textarea {
     border-radius: 8px;
     border: 1px solid var(--white-color);
     /* margin: 0 0 0 5px; */
     padding: 5px;
+}
+
+/* giải đấu dropdown */
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #3d3b3b;
+    min-width: 180px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    margin-top: 3px;
+}
+
+.dropdown-content a {
+    color: var(--white-color);
+    font-size: 12px;
+    font-weight: bold;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: var(--green-color);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
 }

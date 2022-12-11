@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ghi nhận kết quả trận đấu</title>
     <!-- get font family (robonto)  -->
+
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto" type="text/css">
     <link rel="stylesheet" href="./assets/css/base.css">
     <link rel="stylesheet" href="./assets/css/duy.css">
@@ -17,7 +18,6 @@
 </head>
 
 <body>
-
     <main id="main">
         <!-- Trang danh thay đổi quy định -->
         <div class="main__header ">
@@ -46,9 +46,21 @@
                         <li class="header__item">
                             <a href="./index.html" class="header__item-link ">Trang chủ</a>
                         </li>
-                        <li class="header__item">
-                            <a href="" class="header__item-link header__item-link--active">Giải đấu</a>
+
+                        <li class="header__item ">
+                            <div class="dropdown">
+                                <a href="" class="header__item-link header__item-link--active dropbtn">Giải đấu</a>
+                                <div class="dropdown-content">
+                                    <a href="" class="dropdown-item">Đăng ký tham gia giải đấu</a>
+                                    <a href="./registration_file.html" class="dropdown-item">Hồ sơ đăng ký</a>
+                                    <a href="" class="dropdown-item">Lập lịch giải đáu</a>
+                                    <a href="./record_match_results.html" class="dropdown-item">Ghi nhận kết quả trận đấu</a>
+                                    <a href="" class="dropdown-item">Lập lịch giải đáu</a>
+                                    <a href="./change_tournament_rules.html" class="dropdown-item">Thay đổi quy định</a>
+                                </div>
+                            </div>
                         </li>
+
                         <li class="header__item">
                             <a href="./football_team.html" class="header__item-link">Đội bóng</a>
                         </li>
@@ -146,14 +158,14 @@
                                     <div class="rating-player__content">
                                         <ul class="rating-player__contenr-list row table-row no-gutters">
                                             <li class="rating-player__contenr-item col col-mobile-1">1</li>
-    
+
                                             <li class=" rating-player__contenr-item col col-mobile-3">
                                                 <!-- <div class="rating-player__contenr-item-title">Nguyễn Văn A</div> -->
                                                 <input class="form__input8" type="text" id="name_of_player"
                                                     name="name_of_player" placeholder="Nhập tên cầu thủ">
-                                               
+
                                             </li>
-                                            
+
                                             <li class="rating-player__contenr-item col col-mobile-3">
                                                 <!-- <div class="rating-player__contenr-item-title">Đội 1</div> -->
                                                 <input class="form__input8" type="text" id="name_of_team"
