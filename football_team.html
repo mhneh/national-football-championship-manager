@@ -12,11 +12,11 @@
     <link rel="stylesheet" href="./assets/css/duy.css">
     <link rel="stylesheet" href="./assets/css/grid.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="./assets/javascript/main.js"></script>
 </head>
 
 <body>
-
     <main id="main">
         <div class="main__header ">
             <!-- header + nav bar -->
@@ -59,7 +59,7 @@
 
             <!-- content -->
             <div class="main__content">
-                <form class="bg_2" action="./teams/team.html">
+                <form class="bg_2">
                     <h1>HỒ SƠ ĐỘI BÓNG</h1>
 
                     <div>
@@ -67,34 +67,39 @@
                             <div class="col col-mobile-7">
                                 <div class="form__group">
                                     <label for="name" class="form__label">Tên đội bóng</label><br>
-                                    <input type="text" class="form__input6" id="name" placeholder="Nhập tên đội bóng">
+                                    <input type="text" class="form__input6" id="name" placeholder="Nhập tên đội bóng"
+                                        required>
                                 </div>
 
                                 <div class="form__group">
                                     <label for="name" class="form__label">Sân nhà</label><br>
-                                    <input type="text" class="form__input6" id="name" placeholder="Nhập sân nhà">
+                                    <input type="text" class="form__input6" id="home_yard" placeholder="Nhập sân nhà"
+                                        required>
                                 </div>
-                                <div class="form__group" >
+                                <div class="form__group">
                                     <label for="name" class="form__label">Logo đội bóng</label>
-                                    <input type="file" class="form__input" id="name" style="cursor: pointer !important;">
+                                    <input type="file" class="form__input file" id="logo"
+                                        style="cursor: pointer !important;" required>
                                 </div>
 
                             </div>
                             <div>
                                 <div class="form__group">
                                     <label for="name" class="form__label">Số điện thoại</label><br>
-                                    <input type="text" class="form__input6" id="name" placeholder="Nhập số điện thoại">
+                                    <input type="text" class="form__input6" id="phone" placeholder="Nhập số điện thoại"
+                                        required>
                                 </div>
                                 <div class="form__group">
                                     <label for="name" class="form__label">Email</label><br>
-                                    <input type="email" class="form__input6" id="mail" placeholder="Nhập email">
+                                    <input type="email" class="form__input6" id="mail" placeholder="Nhập email"
+                                        required>
                                 </div>
 
                                 <div class="form__group">
                                     <label for="name" class="form__label">Đồng phục</label>
-                                    <input type="file" class="form__input" id="name" style="cursor: pointer !important;">
+                                    <input type="file" class="form__input file" id="uniform"
+                                        style="cursor: pointer !important;" required>
                                 </div>
-
                             </div>
                         </div>
 
@@ -106,14 +111,16 @@
                     </div>
 
                     <div class="center">
-                        <input class="bg_green submit" type="submit" value="Lưu" >
+                        <input class="bg_green submit" type="submit" value="Lưu">
                     </div>
                 </form>
             </div>
         </div>
-
-
     </main>
+
+    <script src="./assets/javascript/football_team.js">
+    
+    </script>
 </body>
 
 </html>
