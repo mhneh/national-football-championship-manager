@@ -1,3 +1,20 @@
+
+.header__account .header__item{
+    margin: 0;
+}
+.header__account .header__item-link{
+    font-size: 1.4rem;
+    padding: 5px 20px;
+}
+
+.header__account .header__item-link-active{
+    color: var(--primary-color);
+    background-color:  rgba(217, 217, 217, 0.5);
+    border-radius: 5px;
+    
+    
+}
+
 .login {
     display: flex;
     justify-content: center;
