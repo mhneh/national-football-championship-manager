@@ -132,6 +132,7 @@ html{
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.5);
 }
+
 /* Header navbar */
 .header{
     display: flex;
@@ -153,8 +154,10 @@ html{
 }
 .header__account .header__item-link{
     font-size: 1.2rem;
+    line-height: 32px;
     font-weight: normal;
     color: rgba(255, 255, 255, 0.5)
+
 }
 .header__account .header__item-link:hover{
     color:var(--primary-color);
@@ -195,6 +198,38 @@ html{
 .header__account .header__item{
     margin-left: 20px;
 }
+.header__item-user{
+    display: flex;
+   justify-content: center;
+   align-items: center;
+
+    
+}
+.header__item-username{
+    color: var(--text-color);
+    font-size: 1.2rem;
+    position: relative;
+    line-height: 32px;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+.header__item-avatar{
+    height: 30px;
+    width: 30px;
+    border-radius: 100%;
+    margin-right: 2px;
+    cursor: pointer;
+}
+.header__item-username::after{
+    content: "";
+    position: absolute;
+    top: 10px;
+    right: -10px;
+    height: 10px;
+    border: 1px solid var(--text-color);
+    background-color: var(--text-color);
+}
+
 /* page */
 .pagination{
     margin-top: -25px;
