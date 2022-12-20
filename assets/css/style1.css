@@ -14,6 +14,30 @@
     
     
 }
+/* .header__account {
+    display: ;
+} */
+.rating-player__header-item {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.rating-play__header-item-title{
+    width: 90%;
+    padding-left: 15px;
+    box-sizing: border-box;
+    text-align: center;
+}
+.rating-player__header-item-control{
+    margin-right: 15px;
+    display: flex;
+    flex-direction: column;
+    
+}
+.rating-player__header-item-control-icon + .rating-player__header-item-control-icon{
+    margin-top:-5px;
+}
+/* ----------------------------- */
 
 .login {
     display: flex;
@@ -99,9 +123,10 @@
     border-radius: 5px;
     position: absolute;
     width: 75%;
-    height: 75%;
     margin-top: 10px;
     background-color: rgba(54, 52, 52, 0.7);
+    display: flex;
+    justify-content: center;
 }
 .signup__form {
     position: absolute;
@@ -111,7 +136,7 @@
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    height: 400px;
+    height: 450px;
     width: 950px;
     justify-content: space-between;
     align-content: space-between;
@@ -122,7 +147,7 @@
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     font-style: normal;
     font-size: 20px;
-    margin-top: 25px;
+    margin-top: 20px;
 }
 
 .signup__items-input {
@@ -132,6 +157,13 @@
     margin: 15px 0px;
     border: none;
     font-size: 14px;
+}
+.signup_item-select{
+    border: none;
+    width: 100%;
+    height: 100%;
+    font-size: 14px;
+    color: rgba(54, 52, 52, 0.7);
 }
 .signup__form-btn {
     cursor: pointer;
@@ -156,7 +188,8 @@
     font-size: 12px;
     color: white;
     z-index: 1;
-    margin-top:510px;
+    margin-top:565px;
+    margin-bottom: 10px;
 }
 .reset {
     display: flex;
@@ -204,32 +237,49 @@
 }
 
 .register{
-    display: flex;
-    justify-content: center;
-    margin-top: 30px;
-}
-.register__header{
     position: absolute;
+    margin: 0 auto;
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 35%;
+    left: 50%;
+    transform:translate(-50%,0%);
+    background-color:rgba(54, 52, 52, 0.7) ;
+    padding: 20px 50px;
+    margin-bottom: 50px;
+    border-radius: 5px;
+}
+
+.register__header{
+    /* position: absolute; */
     color: white;
     text-transform: uppercase;
     text-align: center;
     font-weight: 700;
     font-size: 25px;
-    margin-top: 30px;
+    margin-top: 10px;
+    margin-bottom: 30px;
 }
 .register .team-logo{
-    position: absolute;
-    width: 10%;
-    margin-top: 50px;
-    right: 280px;
+    /* position: absolute; */
+    width: 145px;
+    /* margin-top: 50px; */
+    /* right: 280px; */
 }
 .register__form{
-    position: absolute;
-    margin-top: 80px;
+    /* position: absolute; */
     display: inline-block;
-    width: 1000px;
+    width: 100%; 
 }
 .register__form .register__title{
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 30px;
+}
+.register__title{
     color: white;
     font-size: 20px;
     font-weight: bold;
@@ -262,6 +312,21 @@
 .register__form .register__form-btn:hover{
     background-color: rgb(22, 173, 95);
 }
+/* edit register */
+.container{
+    position: relative;
+    top:0;
+    left: 0;
+    padding: 50px ;
+}
+.register__team{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/*  */
 .schedule{
     display: flex;
     justify-content: center;

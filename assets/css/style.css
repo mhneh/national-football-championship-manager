@@ -109,6 +109,7 @@
     margin-right: 15px;
     display: flex;
     flex-direction: column;
+    cursor: pointer;
     
 }
 .rating-player__header-item-control-icon + .rating-player__header-item-control-icon{

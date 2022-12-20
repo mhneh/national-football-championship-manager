@@ -22,6 +22,7 @@ ul{
 }
 body{
     overflow-x: hidden;
+    background: var(--background-color);
 }
 html{
     /* set font size is 10px */
@@ -184,14 +185,14 @@ html{
     top: -2px;
     transition: ease-in 0.5s;
 }
-.header__navbar > .header__list > .header__item > .header__item-link:hover::after{
+/* .header__navbar > .header__list > .header__item > .header__item-link:hover::after{
     position: absolute;
     content: "";
     border-bottom: 2px var(--white-color) solid;
     width: 100%;
     top:calc(100% + 2px);
     left: 1px;
-}
+} */
 .header__item + .header__item{
     margin-left: 50px;
 }
