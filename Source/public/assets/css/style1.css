@@ -1,0 +1,401 @@
+
+.header__account .header__item{
+    margin: 0;
+}
+.header__account .header__item-link{
+    font-size: 1.4rem;
+    padding: 5px 20px;
+}
+
+.header__account .header__item-link-active{
+    color: var(--primary-color);
+    background-color:  rgba(217, 217, 217, 0.5);
+    border-radius: 5px;
+    
+    
+}
+/* .header__account {
+    display: ;
+} */
+.rating-player__header-item {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.rating-play__header-item-title{
+    width: 90%;
+    padding-left: 15px;
+    box-sizing: border-box;
+    text-align: center;
+}
+.rating-player__header-item-control{
+    margin-right: 15px;
+    display: flex;
+    flex-direction: column;
+    
+}
+.rating-player__header-item-control-icon + .rating-player__header-item-control-icon{
+    margin-top:-5px;
+}
+/* ----------------------------- */
+
+.login {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.login__form {
+    position: absolute;
+    right: 280px;
+    margin-top: 60px;
+}
+
+.login__items {
+    color: white;
+    font-weight: 700;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-style: normal;
+    font-size: 20px;
+    line-height: 39px;
+    margin-top: 25px;
+}
+
+.login__items-input {
+    background-color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    margin: 10px 0px;
+    border: none;
+    font-size: 14px;
+}
+.login__hef{
+    display: flex;
+    justify-content: space-between;
+    font-size: 10px;
+    margin-top: 25px;
+    color: red;
+}
+.login__form-btn {
+    cursor: pointer;
+    padding: 12px 140px;
+    border-radius: 10px;
+    background-color: rgba(22, 173, 37, 1);
+    color: white;
+    font-style: normal;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 20px;
+    margin-top: 30px;
+    right: 280px;
+    border: none;
+}
+.login__form-btn:hover{
+    background-color: rgb(22, 173, 95);
+}
+
+.login__img {
+    border-radius: 5px;
+    position: absolute;
+    width: 75%;
+    height: 75%;
+    margin-top: 10px;
+}
+.login__notice {
+    color: rgba(240, 107, 107, 0.89);
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+    font-size: 13px;
+    margin-top: -6px;
+    line-height: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 380px;
+}
+
+.signup {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+.signup__bg {
+    border-radius: 5px;
+    position: absolute;
+    width: 75%;
+    margin-top: 10px;
+    background-color: rgba(54, 52, 52, 0.7);
+    display: flex;
+    justify-content: center;
+}
+.signup__form {
+    position: absolute;
+    margin-top: 30px;
+}
+.signup__form-box{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 450px;
+    width: 950px;
+    justify-content: space-between;
+    align-content: space-between;
+}
+.signup__items {
+    color: white;
+    font-weight: 700;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-style: normal;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.signup__items-input {
+    background-color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    margin: 15px 0px;
+    border: none;
+    font-size: 14px;
+}
+.signup_item-select{
+    border: none;
+    width: 100%;
+    height: 100%;
+    font-size: 14px;
+    color: rgba(54, 52, 52, 0.7);
+}
+.signup__form-btn {
+    cursor: pointer;
+    padding: 12px 140px;
+    border-radius: 10px;
+    background-color: rgba(22, 173, 37, 1);
+    color: white;
+    font-style: normal;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 20px;
+    margin-top: 25px;
+    right: 280px;
+    border: none;
+    margin-left: 300px;
+}
+.signup__form-btn:hover{
+    background-color: rgb(22, 173, 95);
+}
+.signup__hef{
+    font-size: 12px;
+    color: white;
+    z-index: 1;
+    margin-top:565px;
+    margin-bottom: 10px;
+}
+.reset {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+.reset__form {
+    position: absolute;
+    right: 280px;
+    margin-top: 25px;
+}
+.reset__items {
+    color: white;
+    font-weight: 700;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-style: normal;
+    font-size: 20px;
+    margin-top: 25px;
+}
+.reset__items-input {
+    background-color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    margin: 15px 0px;
+    border: none;
+    font-size: 14px;
+}
+.reset__form-btn {
+    cursor: pointer;
+    padding: 12px 100px;
+    border-radius: 10px;
+    background-color: rgba(22, 173, 37, 1);
+    color: white;
+    font-style: normal;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 20px;
+    margin-top: 30px;
+    right: 280px;
+    border: none;
+}
+.reset__form-btn:hover{
+    background-color: rgb(22, 173, 95);
+}
+
+.register{
+    position: absolute;
+    margin: 0 auto;
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 35%;
+    left: 50%;
+    transform:translate(-50%,0%);
+    background-color:rgba(54, 52, 52, 0.7) ;
+    padding: 20px 50px;
+    margin-bottom: 50px;
+    border-radius: 5px;
+}
+
+.register__header{
+    /* position: absolute; */
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 700;
+    font-size: 25px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+.register .team-logo{
+    /* position: absolute; */
+    width: 145px;
+    /* margin-top: 50px; */
+    /* right: 280px; */
+}
+.register__form{
+    /* position: absolute; */
+    display: inline-block;
+    width: 100%; 
+}
+.register__form .register__title{
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 30px;
+}
+.register__title{
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 30px;
+}
+.register__form .player-table{
+    margin-top: 30px;
+    border: none; 
+    color: white;
+}
+.register__form .player-table .player-table-content{
+    background-color: rgba(34, 40, 49, 1);
+}
+.register__form .player-table--paging{
+    margin-top: 20px;
+}
+.register__form .register__form-btn {
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: rgba(22, 173, 37, 1);
+    color: white;
+    font-style: normal;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    margin-top: 70px;
+    margin-left: 245px;
+    border: none;
+}
+.register__form .register__form-btn:hover{
+    background-color: rgb(22, 173, 95);
+}
+/* edit register */
+.container{
+    position: relative;
+    top:0;
+    left: 0;
+    padding: 50px ;
+}
+.register__team{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/*  */
+.schedule{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+    margin: 0 auto;
+    padding: 50px 50px;
+}
+.schedule__header{
+    /* position: absolute; */
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 700;
+    font-size: 25px;
+}
+.schedule .schedule__content{
+    /* position: absolute; */
+    margin-top: 20px;
+    display: inline-block;
+    width: 100%;
+}
+.schedule__content .schedule__content-btn {
+    padding: 10px 15px;
+    border-radius: 5px;
+    color: white;
+    font-style: normal;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    margin-left: 20px;
+    border: none;
+    cursor: pointer;
+}
+.schedule__content .schedule-table{
+    margin-top: 20px;
+    border: none; 
+    color: white;
+}
+.schedule__content .schedule-table .schedule-table-content{
+    background-color: rgba(34, 40, 49, 1);
+}
+.schedule__content .schedule-table--paging{
+    margin-top: 20px;
+}
+.schedule__content .grp-btn{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 80px;
+}
+.schedule__content .grp-btn .add-btn{
+    background-color: rgba(22, 173, 37, 1);
+}
+.schedule__content .grp-btn .add-btn:hover{
+    background-color: rgb(22, 173, 95);
+}
+.schedule__content .grp-btn .sub-btn{
+    background-color: rgb(255, 0, 0);
+}
+.schedule__content .grp-btn .sub-btn:hover{
+    background-color: rgb(255, 72, 72);
+}
+.schedule__content .grp-btn .edit-btn{
+    background-color: rgba(220, 161, 2, 1);
+}
+.schedule__content .grp-btn .edit-btn:hover{
+    background-color: rgb(248, 203, 82);
+}

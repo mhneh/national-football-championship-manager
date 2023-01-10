@@ -1,0 +1,655 @@
+/* danh sách hồ sơ đăng ký (duy) */
+.logo-in-table {
+    width: 25px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-in-table img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    padding: auto;
+}
+
+.cell {
+    padding: 5px;
+}
+
+.view-profile {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: var(--green-color);
+    font-weight: bold;
+}
+
+.view-profile:hover {
+    color: var(--green-color);
+    text-decoration: underline;
+
+}
+
+.regis-file__container-item {
+    margin: 10px 50px 50px 50px;
+}
+
+
+/* cái nền màu đen đen ở dưới cái bảng =))))) (duy)*/
+.bg_2 {
+    background-color: rgba(0, 0, 0, 0.4);
+    /* opacity: 0.5; */
+    width: 80%;
+    height: 85%;
+    margin: 50px 0 0 0;
+
+}
+
+.bg_2 h1 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--white-color);
+    padding: 20px 0;
+}
+
+/* trang thay đổi quy định (duy)*/
+.bg_2 h2 {
+
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--white-color);
+    /* padding: 0 0 0 30px; */
+    margin: 15px;
+
+    margin-left: 8.3333333%;
+}
+
+.form__group {
+    margin: 20px 0 0 30px;
+    font-size: 1.5rem;
+    color: var(--white-color);
+}
+
+.form__input1 {
+    width: 120px;
+    height: 30px;
+    font-size: 1.2rem;
+    margin: 20px 0 0 15px;
+    padding: 5px;
+    border-radius: 8px;
+    border: 1px solid var(--white-color);
+}
+
+.form__input2 {
+    width: 260px;
+    height: 30px;
+    font-size: 1.2rem;
+    margin: 20px 0 0 15px;
+    padding: 5px;
+    border-radius: 8px;
+    border: 1px solid var(--white-color);
+}
+
+.form__input3 {
+    width: 150px;
+    height: 30px;
+    font-size: 1.2rem;
+    margin: 20px 0 0 15px;
+    padding: 5px;
+    border-radius: 8px;
+    border: 1px solid var(--white-color);
+}
+
+.form__input4 {
+    width: 315px;
+    height: 30px;
+    font-size: 1.2rem;
+    margin: 20px 0 0 15px;
+    padding: 5px;
+    border-radius: 8px;
+    border: 1px solid var(--white-color);
+}
+
+.form__input5 {
+    width: 92px;
+    height: 30px;
+    font-size: 1.2rem;
+    margin: 20px 0 0 15px;
+    padding: 5px;
+    border-radius: 8px;
+    border: 1px solid var(--white-color);
+}
+
+.form__input6 {
+    width: 350px;
+    height: 30px;
+    font-size: 1.2rem;
+    margin-top: 5px;
+    padding: 5px;
+    border-radius: 8px;
+    border: 1px solid var(--white-color);
+}
+
+.form__input7 {
+    width: 172px;
+    height: 30px;
+    font-size: 1.2rem;
+    margin-top: 5px;
+    padding: 5px;
+    border-radius: 8px;
+    border: 1px solid var(--white-color);
+}
+
+.form__input8 {
+    width: 200px;
+    height: 30px;
+    font-size: 1.2rem;
+    margin-top: 5px;
+    padding: 5px;
+    border-radius: 8px;
+    border: 1px solid var(--white-color);
+}
+
+.form__input9 {
+    width: 100px;
+    height: 30px;
+    font-size: 1.2rem;
+    margin-top: 5px;
+    margin-left: 20px;
+    padding: 5px;
+    border-radius: 8px;
+    border: 1px solid var(--white-color);
+}
+
+.square {
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    border-radius: 8px;
+    border: 1px solid var(--white-color);
+    text-align: center;
+    margin-top: 5px;
+}
+
+.priority {
+    width: 75px;
+    height: 30px;
+    font-size: 1.2rem;
+    margin: 20px 0 0 15px;
+    padding: 5px;
+    border-radius: 8px;
+    border: 1px solid var(--white-color);
+}
+
+.bg_green {
+    background-color: var(--green-color);
+}
+
+.submit {
+    border: none;
+    margin: 10px;
+    margin-bottom: 0px;
+    width: 100px;
+    height: 40px;
+    border-radius: 8px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: var(--white-color);
+    cursor: pointer;
+}
+
+/* nút thêm */
+.btn__add,
+.btn__remove {
+    width: 80px;
+    height: 30px;
+    border-radius: 8px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: var(--white-color);
+    cursor: pointer;
+    background-color: var(--green-color);
+    border: none;
+    margin: 0 0 0 30px;
+    padding: 10px;
+}
+
+.btn__remove {
+    background-color: var(--primary-color);
+}
+
+/* đọi bóng */
+.form__group textarea {
+    border-radius: 8px;
+    border: 1px solid var(--white-color);
+    /* margin: 0 0 0 5px; */
+    padding: 5px;
+}
+
+.main__header {
+    height: 100vh;
+    min-height: 500px;
+    background-image: url(../images/bg_3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.main__header-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+/* Header navbar */
+.header {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 10px;
+}
+
+.header__navbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__logo-img {
+    opacity: 0.4;
+    width: 100px;
+}
+
+.header__account {
+    float: right;
+}
+
+.header__account .header__item-link {
+    font-size: 1.2rem;
+    font-weight: normal;
+    color: rgba(255, 255, 255, 0.5)
+}
+
+.header__account .header__item-link:hover {
+    color: var(--primary-color);
+}
+
+.header__list {
+    display: flex;
+    flex: 1;
+    list-style: none;
+    position: relative;
+    z-index: 1;
+    justify-content: center;
+}
+
+.header__item-link {
+    display: block;
+    text-decoration: none;
+    color: var(--white-color);
+    font-size: 1.6rem;
+    position: relative;
+    font-weight: 400;
+}
+
+.header__navbar>.header__list>.header__item>.header__item-link:hover::after {
+    position: absolute;
+    content: "";
+    border-bottom: 2px var(--white-color) solid;
+    width: 100%;
+    top: calc(100% + 2px);
+    left: 1px;
+}
+
+.header__item+.header__item {
+    margin-left: 50px;
+}
+
+.header__account .header__item {
+    margin-left: 20px;
+}
+
+/* countdown */
+.header__container {
+    position: relative;
+    flex: 1;
+}
+
+.header__content {
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+
+}
+
+.header__content-title {
+    height: 120px;
+    line-height: 120px;
+    font-size: 6rem;
+    font-weight: 700;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--white-color);
+}
+
+.header__content-description {
+    color: var(--text-color);
+    font-size: 1.8rem;
+    height: 20px;
+    line-height: 20px;
+    margin-bottom: 40px;
+
+}
+
+/* container */
+/* bang tran dau tiep theo */
+.main__container-item {
+    margin: 50px 0;
+}
+
+.next-match__match {
+    display: flex;
+    padding: 20px 40px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.next-match__team {
+    width: 40%;
+}
+
+.next-match__with {
+    display: block;
+    width: 50px;
+    padding: 5px;
+    border-radius: 4px;
+    text-align: center;
+    background-color: var(--primary-color);
+}
+
+.next-match__team-logo {
+    width: 100%;
+    height: 200px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.next-match__team-name {
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+.next-match__team-logo-img {
+
+    height: 140px;
+}
+
+.next-match__Tournaments {
+    text-align: center;
+    padding-bottom: 42px;
+
+}
+
+.next-match__Tournaments-name {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+}
+
+.next-match__Tournaments-time {
+    font-size: 1.3rem;
+    color: var(--text-color);
+}
+
+.next-match__Tournaments-time,
+.next-match__Tournaments-name {
+    height: 30px;
+    line-height: 30px;
+
+}
+
+.rating-player__header-item {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.rating-play__header-item-title {
+    width: 90%;
+    padding-left: 15px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.rating-player__header-item-control {
+    margin-right: 15px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.rating-player__header-item-control-icon+.rating-player__header-item-control-icon {
+    margin-top: -5px;
+}
+
+
+
+
+/* base.duy */
+
+/* CREATE BASE CSS */
+:root {
+    --white-color: #fff;
+    --black-color: #000;
+    --text-color: #ccc;
+    ;
+    --primary-color: #ee1e46;
+    --border-color: #dbdbdb;
+    --star-gold-color: #FFCE3E;
+    --table-background-color: #222831;
+    /* màu nền của bảng (duy) */
+    --green-color: #16ad25;
+    /* màu xanh lá cây (duy) */
+    --bg-2: #3c3a3a;
+
+}
+
+* {
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+html {
+    /* set font size is 10px */
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+.header__item-link--active::after {
+    position: absolute;
+    content: "";
+    border-bottom: 2px var(--white-color) solid;
+    width: 100%;
+    top: calc(100% + 2px);
+    left: 1px;
+}
+
+.main__container {
+    background-color: var(--table-background-color);
+    padding: 50px 0;
+    text-align: center;
+}
+
+.left {
+    float: left;
+}
+
+/* duy */
+.center {
+    text-align: center;
+}
+
+.main__content {
+    display: flex;
+    justify-content: center;
+    /* The content is above */
+    position: relative;
+}
+
+/* button */
+.btn {
+    display: block;
+    text-decoration: none;
+    width: 150px;
+    height: 50px;
+    line-height: 50px;
+    text-transform: uppercase;
+    border-radius: 3px;
+    text-align: center;
+    border: 1px solid transparent;
+    color: var(--white-color);
+
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    font-size: 1.6rem;
+    font-weight: 500;
+    border-radius: 4px;
+}
+
+.btn-primary:hover {
+    background-color: transparent;
+    border: 2px solid var(--white-color);
+}
+
+/* table */
+/*  */
+.table {
+    color: var(--white-color);
+    border: 1px solid #31353b;
+    font-size: 1.2rem;
+}
+
+.table-header {
+    height: 50px;
+    line-height: 50px;
+    background-color: var(--primary-color);
+    font-weight: 500;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.text-left {
+    padding-left: 10px;
+    text-align: left;
+}
+
+.table-row {
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 1px solid #31353b;
+    text-align: center;
+
+}
+
+.header__item-control {
+    display: inline-block;
+    display: flex;
+    flex-direction: column;
+}
+
+/* page */
+.pagination {
+    margin-top: -25px;
+    margin-bottom: 50px;
+}
+
+.pagination__list {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.pagination__item-link {
+    display: block;
+    text-decoration: none;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-transform: uppercase;
+    border-radius: 2px;
+    text-align: center;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    margin-right: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+
+}
+
+.pagination__item-link--no-click {
+    cursor: text;
+    color: rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.pagination__item-link--active {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    font-weight: bold;
+}
+
+.pagination__item-link:hover {
+    opacity: 0.7;
+}
+
+.pagination__item-link--no-click:hover {
+    opacity: 1;
+}
+
+/* tô màu nền của bảng (duy) */
+.table-row {
+    background-color: var(--table-background-color);
+}
+
+.notifi  p {
+    padding: 10px 0;
+    color: var(--white-color);
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-left: 3.7%;
+    
+}
+
+.notice {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--white-color);
+}
+
+
+.pt-2{
+    padding-top: 2rem;
+}

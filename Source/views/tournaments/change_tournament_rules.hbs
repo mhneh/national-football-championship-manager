@@ -1,0 +1,235 @@
+<div class="main__content">
+  <div class="bg_2">
+    <h1>THAY ĐỔI QUY ĐỊNH</h1>
+    <div class="notifi">
+      <p><i>* Các dữ liệu nhập vào phải là số</i> <br /></p>
+      <p><i>* Điểm thắng > Điểm hòa > Điểm thua</i></p>
+    </div>
+    <form>
+      <div class="grid wide row">
+        <div class="col col-mobile-7">
+          <div class="form__group">
+            <input type="checkbox" />
+            Tuổi tối thiểu, tuổi tối đa của cầu thủ
+            <br />
+            <input
+              type="text"
+              class="form__input1 check"
+              placeholder="Nhập tuổi tối thiểu"
+              required
+            />
+            <input
+              type="text"
+              class="form__input1 check"
+              placeholder="Nhập tuổi tối đa"
+              required
+            />
+          </div>
+
+          <div class="form__group">
+            <input type="checkbox" />
+            Số lượng cầu thủ nước ngoài tối đa
+            <br />
+            <input
+              type="text"
+              class="form__input2 check"
+              placeholder="Nhập số lượng cầu thủ nước ngoài tối đa"
+              required
+            />
+          </div>
+
+          <div class="form__group">
+            <input type="checkbox" />
+            Thời điểm ghi bàn tối đa
+            <br />
+            <input
+              type="text"
+              class="form__input2 check"
+              placeholder="Nhập thời điểm ghi bàn tối đa"
+              required
+            />
+          </div>
+
+          <div class="form__group">
+            <input type="checkbox" />
+            Thứ tự ưu tiên khi xếp hạng
+            <br />
+            <div>
+              <select name="" class="priority">
+                <option value="">Điểm</option>
+                <option value="">Hiệu số</option>
+                <option value="">Đối đầu</option>
+              </select>
+              <select name="" class="priority">
+                <option value="">Điểm</option>
+                <option value="">Hiệu số</option>
+                <option value="">Đối đầu</option>
+              </select>
+              <select name="" class="priority">
+                <option value="">Điểm</option>
+                <option value="">Hiệu số</option>
+                <option value="">Đối đầu</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="col col-mobile-5">
+          <div class="form__group">
+            <input type="checkbox" />
+            Số lượng cầu thủ tối thiểu, tối đa
+            <br />
+            <div class="cc">
+              <input
+                type="text"
+                class="form__input3 check"
+                placeholder="Nhập số lượng tối thiểu"
+                required
+              />
+              <input
+                type="text"
+                class="form__input3 check"
+                placeholder="Nhập số lượng tối đa"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="form__group">
+            <input type="checkbox" />
+            Số lượng các loại bàn thắng
+            <br />
+            <input
+              type="text"
+              class="form__input4 check"
+              placeholder="Nhập số lượng các loại bàn thắng"
+            />
+          </div>
+
+          <div class="form__group scores">
+            <input type="checkbox" />
+            Điểm số khi thắng, hoà, thua
+            <br />
+            <input
+              type="text"
+              class="form__input5 check win"
+              placeholder="Điểm thắng"
+              required
+            />
+            <!-- add larger sign -->
+
+            <input
+              type="text"
+              class="form__input5 check draw"
+              placeholder="Điểm hoà"
+              required
+            />
+            <input
+              type="text"
+              class="form__input5 check lose"
+              placeholder="Điểm thua"
+              required
+            />
+          </div>
+        </div>
+
+      </div>
+      <div class="center">
+        <input class="bg_green submit" type="submit" value="Lưu" />
+      </div>
+    </form>
+  </div>
+</div>
+
+<script>
+// khi tick vào mới được điền vào ô input
+$(document).ready(function () {
+  $(".check").prop("disabled", true);
+  $("select").prop("disabled", true);
+  $("input[type=checkbox]").click(function () {
+    if ($(this).is(":checked")) {
+      $(this).parent().find(".check").prop("disabled", false);
+      $(this).parent().find("select").prop("disabled", false);
+    } else {
+      $(this).parent().find(".check").prop("disabled", true);
+      $(this).parent().find("select").prop("disabled", true);
+
+      $(this).parent().find(".check").val("");
+      $(this).parent().find(".check").css("border", "1px solid #ccc");
+      $(this).parent().find(".check").removeClass("invalid");
+
+      //remove invalid class in win
+      $(this).parent().find(".win").removeClass("invalid");
+
+      $(this).parent().find(".icon").remove();
+      $(this).parent().find(".notice").remove();
+    }
+  });
+});
+
+// kiểm tra điểm thắng, hòa, thua
+$(".scores input").on("input", function () {
+  var win = parseInt($(".win").val());
+  var draw = parseInt($(".draw").val());
+  var lose = parseInt($(".lose").val());
+
+  // if win, draw, lose is not empty
+  if (win && draw && lose) {
+    if (win > draw && draw > lose) {
+      $(".win").css("border", "3px solid green");
+      $(".win").addClass("valid");
+      $(".win").removeClass("invalid");
+
+      $(".draw").css("border", "3px solid green");
+      $(".draw").addClass("valid");
+      $(".draw").removeClass("invalid");
+
+      $(".lose").css("border", "3px solid green");
+      $(".lose").addClass("valid");
+      $(".lose").removeClass("invalid");
+    } else {
+      $(".win").css("border", "3px solid red");
+      $(".win").addClass("invalid");
+      $(".win").removeClass("valid");
+
+      $(".draw").css("border", "3px solid red");
+      $(".draw").addClass("invalid");
+      $(".draw").removeClass("valid");
+
+      $(".lose").css("border", "3px solid red");
+      $(".lose").addClass("invalid");
+      $(".lose").removeClass("valid");
+    }
+  }
+});
+
+// kiểm tra định dạng input
+$(".check").on("input", function () {
+  var input = $(this).val();
+  var regex = /^[0-9]+$/;
+
+  if (!regex.test(input)) {
+    $(this).css("border", "3px solid red");
+    $(this).addClass("invalid");
+    $(this).removeClass("valid");
+  } else {
+    $(this).css("border", "3px solid green");
+    $(this).addClass("valid");
+    $(this).removeClass("invalid");
+  }
+});
+
+$(".submit").click(function (e) {
+  var canSubmit = true;
+  $(".check").each(function () {
+    if ($(this).hasClass("invalid")) {
+      canSubmit = false;
+    }
+  });
+  if (!canSubmit) {
+    e.preventDefault();
+    $(".invalid").css("border", "3px solid red");
+  }
+});
+
+    </script>

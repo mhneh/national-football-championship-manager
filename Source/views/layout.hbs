@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Football Management</title>
+      <!-- get font family (robonto)  -->
+      <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto" type="text/css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+      <link
+              rel="stylesheet"
+              href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+              integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+              crossorigin="anonymous"
+              referrerpolicy="no-referrer"
+      />
+      <link
+              href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+              rel="stylesheet"
+      />
+      <link rel="stylesheet" href="/assets/css/master.css">
+      <script src="/assets/javascript/main.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  </head>
+  <body>
+  <main id="main">
+      <!-- Trang dau tien -->
+      <div class="main__header ">
+          <div class="main__header-overlay">
+          </div>
+          <!-- header + nav bar -->
+          <header class="header grid wide">
+              <div class="header__navbar">
+                  <div class="header__logo">
+                      <img src="/assets/images/logo.png" alt="logo" class="header__logo-img">
+                  </div>
+                  <div class="header__account">
+                    {{#if loggedIn}}
+                        <ul class="header__list">
+                            <li class="header__item">
+                                <div class="header__item-user">
+                                    <img src="/assets/images/account/avatar_id.jpg" alt="" class="header__item-avatar">
+                                    <p class="header__item-username">{{username}} | {{roleName}}</p>
+                                </div>
+                            </li>
+                            <li class="header__item">
+                                <a href="/auth/logout" class="header__item-link"
+                                    style="font-size: 1.2rem; padding-bottom:  0;padding-top: 0;">Đăng
+                                    xuất</a>
+                            </li>
+                        </ul>
+                      {{else}}
+                        <ul class="header__list">
+                          <li class="header__item">
+                              <a href="/auth/login" class="header__item-link {{#if active.login}}header__item-link-active{{/if}}"
+                                 style="font-weight: bold; line-height: 1.6rem;">Đăng nhập</a>
+                          </li>
+                          <li class="header__item">
+                              <a href="/auth/signup" class="header__item-link {{#if active.signup}}header__item-link-active{{/if}}"
+                                 style="font-weight: bold; line-height: 1.6rem;">Đăng ký</a>
+                          </li>
+                      </ul>
+                      {{/if}}
+                  </div>
+              </div>
+              <div class="header__navbar">
+                  <ul class="header__list">
+                      <li class="header__item">
+                          <a href="/" class="header__item-link {{#if active.home}}header__item-link--active{{/if}}">Trang chủ</a>
+                      </li>
+                      <li class="header__item">
+                          <a href="/tournaments" class="header__item-link {{#if active.tournaments}}header__item-link--active{{/if}}">Giải đấu</a>
+                      </li>
+                      <li class="header__item">
+                          <a href="/teams" class="header__item-link {{#if active.teams}}header__item-link--active{{/if}}">Đội bóng</a>
+                      </li>
+                      <li class="header__item">
+                          <a href="/matches" class="header__item-link {{#if active.matches}}header__item-link--active{{/if}}">Trận đấu</a>
+                      </li>
+                      <li class="header__item">
+                          <a href="/players" class="header__item-link {{#if active.players}}header__item-link--active{{/if}}">Cầu thủ</a>
+                      </li>
+                  </ul>
+              </div>
+          </header>
+
+          {{{body}}}
+      </div>
+  </main>
+
+  <script
+          src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js"
+          integrity="sha512-rpLlll167T5LJHwp0waJCh3ZRf7pO6IT1+LZOhAyP6phAirwchClbTZV3iqL3BMrVxIYRbzGTpli4rfxsCK6Vw=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer"
+  ></script>
+  </body>
+</html>

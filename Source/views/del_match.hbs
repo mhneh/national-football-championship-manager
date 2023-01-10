@@ -1,0 +1,40 @@
+<!-- content -->
+<div class="main__content">
+    <div class="bg_2">
+        <h1>XOÁ TRẬN ĐẤU</h1>
+
+        <div class="">
+            <div class=" form__group grid row ">
+                <form class="col col-mobile-4 col-mobile-offset-1" name="delmatch" action="post" id="delmatch">
+                    <label for="match_id">Trận đấu</label> <br>
+                    <input class="form__input6" type="text" id="match_id" name="match_id"
+                        placeholder="Nhập stt trận đấu">
+                    <div class="center">
+                        <input class="bg_green submit " type="submit" value="Xoá">
+                    </div>
+                </form>
+
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('#delmatch').submit(function (e) {
+            e.preventDefault();
+            const form = $(this);
+            const actionUrl = form.attr('action');
+            $.ajax({
+                type: "POST",
+                url: "/tournaments/schedule/delmatch",
+                data: form.serialize(), // serializes the form's elements.
+                success: function (data) {
+                    window.location.href = "/tournaments/schedule";
+                }
+            });
+        })
+    })
+</script>

@@ -1,0 +1,64 @@
+<!-- content -->
+<div class="main__content">
+    <div class="bg_2">
+        <h1>THÊM TRẬN ĐẤU</h1>
+
+        <form class="" name="addmatch" id="addmatch">
+            <div class=" form__group grid row ">
+                <div class="col col-mobile-4 col-mobile-offset-1">
+                    <label for="id_of_team1">Đội 1</label> <br>
+                    <input class="form__input6" type="text" id="id_of_team1" name="id_of_team1"
+                        placeholder="Nhập id đội 1">
+                </div>
+                <div class="col col-mobile-4 col-mobile-offset-2">
+
+                    <label for="id_of_team2">Đội 2</label> <br>
+                    <input class="form__input6" type="text" id="id_of_team2" name="id_of_team2"
+                        placeholder="Nhập id đội 2">
+                </div>
+            </div>
+
+            <div class="form__group grid row">
+                <div class="col col-mobile-4 col-mobile-offset-1">
+                    <label for="name_of_pitch">Sân</label> <br>
+                    <input class="form__input6" type="text" id="name_of_pitch" name="name_of_pitch"
+                        placeholder="Nhập tên sân">
+                </div>
+            </div>
+            <div class="form__group grid row">
+                <div class="grid row" style="text-align: center;">
+                    <div class="col col-mobile-3 " style="margin-left:5em ;">
+                        <label for="date">Ngày</label> <br>
+                        <input class="form__input7" type="date" id="date" name="date">
+                    </div>
+
+                    <div class="col col-mobile-3 col-mobile-offset-4">
+                        <label for="time">Giờ</label> <br>
+                        <input class="form__input7" type="time" id="time" name="time">
+                    </div>
+                </div>
+            </div>
+            <div class="center">
+                <input class="bg_green submit " type="submit" value="Lưu">
+            </div>
+        </form>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('#addmatch').submit(function (e) {
+            e.preventDefault();
+            const form = $(this);
+            const actionUrl = form.attr('action');
+            $.ajax({
+                type: "POST",
+                url: "/tournaments/schedule/addmatch",
+                data: form.serialize(), // serializes the form's elements.
+                success: function (data) {
+                    window.location.href = "/tournaments/schedule";
+                }
+            });
+        })
+    })
+</script>

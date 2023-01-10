@@ -1,0 +1,145 @@
+<div class="main-content">
+    <div class="background-blur">
+        <div class="search-form">
+            <div class="search-form__content">
+                <form action="" class="search-form__form">
+                    <div class="search-form__form-group" style="margin-top: 20px;margin-bottom: -10px;">
+                        <input
+                                type="text"
+                                name="player"
+                                class="search-form__form-input"
+                                placeholder="Tìm kiếm cầu thủ"
+                                value="{{playerName}}"
+                        />
+                        <button class="search-form__form-btn">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="main__container-item row">
+            <div class="col col-mobile-12 grid">
+                <div class="rating-player table font-size-16">
+                    <header
+                            class="rating-player__header table-header rounded-top"
+                    >
+                        <ul
+                                class="rating-player__header-list row no-gutters font-size-16"
+                        >
+                            <li class="rating-player__header-item col col-mobile-1">
+                                <div class="rating-play__header-item-title">STT</div>
+                                <div class="rating-player__header-item-control">
+                                    <i
+                                            class="rating-player__header-item-control-icon fa-solid fa-angle-up"
+                                    ></i>
+                                    <i
+                                            class="rating-player__header-item-control-icon fa-solid fa-angle-down"
+                                    ></i>
+                                </div>
+                            </li>
+                            <li class="rating-player__header-item col col-mobile-3">
+                                <div class="rating-play__header-item-title">
+                                    Tên cầu thủ
+                                </div>
+                                <div class="rating-player__header-item-control">
+                                    <i
+                                            class="rating-player__header-item-control-icon fa-solid fa-angle-up"
+                                    ></i>
+                                    <i
+                                            class="rating-player__header-item-control-icon fa-solid fa-angle-down"
+                                    ></i>
+                                </div>
+                            </li>
+                            <li class="rating-player__header-item col col-mobile-3">
+                                <div class="rating-play__header-item-title">
+                                    Đội bóng
+                                </div>
+                                <div class="rating-player__header-item-control">
+                                    <i
+                                            class="rating-player__header-item-control-icon fa-solid fa-angle-up"
+                                    ></i>
+                                    <i
+                                            class="rating-player__header-item-control-icon fa-solid fa-angle-down"
+                                    ></i>
+                                </div>
+                            </li>
+                            <li class="rating-player__header-item col col-mobile-2">
+                                <div class="rating-play__header-item-title">Vị trí</div>
+                                <div class="rating-player__header-item-control">
+                                    <i
+                                            class="rating-player__header-item-control-icon fa-solid fa-angle-up"
+                                    ></i>
+                                    <i
+                                            class="rating-player__header-item-control-icon fa-solid fa-angle-down"
+                                    ></i>
+                                </div>
+                            </li>
+                            <li class="rating-player__header-item col col-mobile-3">
+                                <div class="rating-play__header-item-title">
+                                    Tổng số bàn thắng
+                                </div>
+                                <div class="rating-player__header-item-control">
+                                    <i
+                                            class="rating-player__header-item-control-icon fa-solid fa-angle-up"
+                                    ></i>
+                                    <i
+                                            class="rating-player__header-item-control-icon fa-solid fa-angle-down"
+                                    ></i>
+                                </div>
+                            </li>
+                        </ul>
+                    </header>
+                    <div class="rating-player__content">
+                        {{#each players}}
+                            <ul class="rating-player__content-list row table-row no-gutters">
+                            <li class="rating-player__content-item col col-mobile-1">
+                                {{this.player.stt}}
+                            </li>
+                            <li class="rating-player__content-item col col-mobile-3">
+                                {{this.player.name}}
+                            </li>
+                            <li class="rating-player__content-item col col-mobile-3">
+                                {{this.team}}
+                            </li>
+                            <li class="rating-player__content-item col col-mobile-2">
+                                {{this.player.role}}
+                            </li>
+                            <li class="rating-player__content-item col col-mobile-3">
+                                {{this.player.goal}}
+                            </li>
+                        </ul>
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pagination left">
+            <ul class="pagination__list" style="margin-left: 20px;">
+                <li class="pagination__item">
+                    <a
+                            class="pagination__item-link"
+                            href="/players?page={{previousPage}}"
+                    >
+                        <i class="fa-solid fa-angle-left"></i
+                        ></a>
+                </li>
+                <li class="pagination__item">
+                    <a class="pagination__item-link pagination__item-link--active"
+                        href="/players?page={{page}}"
+                    >
+                        {{page}}
+                    </a>
+                </li>
+                <li class="pagination__item">
+                    <a class="pagination__item-link"
+                       href="/players?page={{nextPage}}"
+                    >
+                        <i class="fa-solid fa-angle-right"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+

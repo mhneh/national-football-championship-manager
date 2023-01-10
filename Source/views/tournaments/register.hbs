@@ -1,0 +1,123 @@
+  <div class="register" style="margin-top:-150px">
+    <div class="register__header">Đăng ký tham gia giải đấu</div>
+    <div class="register__team">
+      <div>
+        <div class="register__title">Đội bóng của bạn: {{team.name}}</div>
+        <div class="register__title">Sân nhà: {{team.stadium}}</div>
+        <div class="register__title">Danh sách cầu thủ</div>
+      </div>
+      <img class="team-logo" src=".{{team.logo}}" alt="logo" />
+    </div>
+    <form class="register__form" method="post">
+
+      <div class="row">
+        <div class="col col-mobile-12 grid">
+          <div class="rating-player table player-table">
+            <header
+              class="rating-player__header table-header"
+              style="border-radius:5px 5px 0px 0px;"
+            >
+              <ul class="rating-player__header-list row no-gutters">
+                <li class="rating-player__header-item col col-mobile-1">
+                  <div class="rating-play__header-item-title">STT</div>
+                  <div class="rating-player__header-item-control">
+                    <i
+                      class="rating-player__header-item-control-icon fa-solid fa-angle-up"
+                    ></i>
+                    <i
+                      class="rating-player__header-item-control-icon fa-solid fa-angle-down"
+                    ></i>
+                  </div>
+                </li>
+                <li class="rating-player__header-item col col-mobile-3">
+                  <div class="rating-play__header-item-title">Tên cầu thủ</div>
+                  <div class="rating-player__header-item-control">
+                    <i
+                      class="rating-player__header-item-control-icon fa-solid fa-angle-up"
+                    ></i>
+                    <i
+                      class="rating-player__header-item-control-icon fa-solid fa-angle-down"
+                    ></i>
+                  </div>
+                </li>
+                <li class="rating-player__header-item col col-mobile-3">
+                  <div class="rating-play__header-item-title">Ngày sinh</div>
+                  <div class="rating-player__header-item-control">
+                    <i
+                      class="rating-player__header-item-control-icon fa-solid fa-angle-up"
+                    ></i>
+                    <i
+                      class="rating-player__header-item-control-icon fa-solid fa-angle-down"
+                    ></i>
+                  </div>
+
+                </li>
+                <li class="rating-player__header-item col col-mobile-2">
+                  <div class="rating-play__header-item-title">Vị trí</div>
+                  <div class="rating-player__header-item-control">
+                    <i
+                      class="rating-player__header-item-control-icon fa-solid fa-angle-up"
+                    ></i>
+                    <i
+                      class="rating-player__header-item-control-icon fa-solid fa-angle-down"
+                    ></i>
+                  </div>
+                </li>
+                <li class="rating-player__header-item col col-mobile-3">
+                  <div class="rating-play__header-item-title">Loại cầu thủ</div>
+                  <div class="rating-player__header-item-control">
+                    <i
+                      class="rating-player__header-item-control-icon fa-solid fa-angle-up"
+                    ></i>
+                    <i
+                      class="rating-player__header-item-control-icon fa-solid fa-angle-down"
+                    ></i>
+                  </div>
+                </li>
+              </ul>
+            </header>
+            <div class="rating-player__content player-table-content">
+                {{#each players}}
+              <ul
+                class="rating-player__contenr-list row table-row no-gutters text-center"
+              >
+                <li class="rating-player__contenr-item col col-mobile-1">{{this.stt}}</li>
+                <li class="rating-player__contenr-item col col-mobile-3"> {{this.name}} </li>
+                </li>
+                <li
+                  class="rating-player__contenr-item col col-mobile-3"
+                >{{this.birthday}}</li>
+                <li class="rating-player__contenr-item col col-mobile-2">{{this.role}}</li>
+                <li class="rating-player__contenr-item col col-mobile-3">{{this.type}}</li>
+              </ul>
+                {{/each}}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="pagination left player-table--paging">
+        <ul class="pagination__list">
+          <li class="pagination__item">
+            <a class="pagination__item-link pagination__item-link--no-click">
+              <i class="fa-solid fa-angle-left"></i></a>
+          </li>
+          <li class="pagination__item">
+            <a
+              class="pagination__item-link pagination__item-link--active"
+            >01</a>
+          </li>
+          <li class="pagination__item">
+            <a class="pagination__item-link pagination__item-link--no-click"><i
+                class="fa-solid fa-angle-right"
+              ></i></a>
+          </li>
+        </ul>
+      </div>
+      <button
+        type="submit"
+        class="register__form-btn"
+        style="cursor: pointer;"
+      >Xác nhận tham gia</button>
+    </form>
+  </div>
+  

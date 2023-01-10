@@ -1,0 +1,279 @@
+<div class="main__content">
+  <div class="bg_2">
+    <h1>KẾT QUẢ TRẬN ĐẤU</h1>
+
+    <form id="form-result" method="POST" class="form">
+      <div class="">
+        <div class="form__group grid row">
+          <div class="col col-mobile-4 col-mobile-offset-1">
+            <label for="name_of_team1">Đội 1</label>
+            <br />
+            <input
+              class="form__input6"
+              type="text"
+              id="name_of_team1"
+              name="name_of_team1"
+              placeholder="Nhập tên đội 1"
+              required
+            />
+          </div>
+
+          <div class="col col-mobile-4 col-mobile-offset-2">
+
+            <label for="name_of_team2">Đội 2</label>
+            <br />
+            <input
+              class="form__input6"
+              type="text"
+              id="name_of_team2"
+              name="name_of_team2"
+              placeholder="Nhập tên đội 2"
+              required
+            />
+          </div>
+
+        </div>
+
+        <div class="form__group grid row">
+          <div class="col col-mobile-4 col-mobile-offset-1">
+            <label for="stadium">Sân</label>
+            <br />
+            <input
+              class="form__input6"
+              type="text"
+              id="stadium"
+              name="stadium"
+              placeholder="Nhập tên sân"
+            />
+          </div>
+
+          <div
+            class="col col-mobile-1-5 center"
+            style="margin-left:3em; margin-right:1.35em"
+          >
+            <label for="score">Tỉ số</label>
+            <br />
+            <input
+              class="square"
+              type="text"
+              id="score_of_team1"
+              name="score_of_team1"
+              placeholder="0"
+            />
+
+            <input
+              class="square"
+              type="text"
+              id="score_of_team2"
+              name="score_of_team2"
+              placeholder="0"
+            />
+          </div>
+
+          <div class="col col-mobile-4" style="margin-left:2.3em">
+            <div class="grid row">
+              <div class="col col-mobile-1">
+                <label for="date">Ngày</label>
+                <br />
+                <input class="form__input7" type="date" id="date" name="date" />
+              </div>
+
+              <div class="col col-mobile-2 col-mobile-offset-5">
+                <label for="time">Giờ</label>
+                <br />
+                <input class="form__input7" type="time" id="time" name="time" />
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div>
+        <h2>Danh sách các cầu thủ ghi bàn</h2>
+        <!-- nhap danh sach cau thi ghi ban -->
+        <div class="regis-file__container-item">
+          <div class="col col-mobile-12 grid">
+            <div class="rating-player table">
+              <header class="rating-player__header table-header">
+                <ul class="rating-player__header-list row no-gutters">
+                  <li class="rating-player__header-item col col-mobile-1">
+                    <div class="rating-play__header-item-title">STT</div>
+                  </li>
+                  <li class="rating-player__header-item col col-mobile-3">
+                    <div class="rating-play__header-item-title">Cầu thủ</div>
+                  </li>
+                  <li class="rating-player__header-item col col-mobile-3">
+                    <div class="rating-play__header-item-title">Đội</div>
+                  </li>
+                  <li class="rating-player__header-item col col-mobile-2">
+                    <div class="rating-play__header-item-title">Loại bàn thắng</div>
+                  </li>
+                  <li class="rating-player__header-item col col-mobile-3">
+                    <div class="rating-play__header-item-title">Thời điểm</div>
+                  </li>
+                </ul>
+              </header>
+
+              <div class="rating-player__content">
+                <ul class="table-row">
+                  <li>
+                    <span class="btn__add"> <i class="fa-solid fa-plus"></i> Thêm</span>
+                    <span class="btn__remove"> <i class="fa-solid fa-minus"></i> Xóa</span>
+                  </li>
+                </ul>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="center">
+        {{!-- <input class="bg_green submit" type="submit" value="Lưu" /> --}}
+        <button class="bg_green submit" type="submit" value="Lưu">Lưu</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+{{!-- <script src="../assets/javascript/record_match_results.js"></script> --}}
+
+<script>
+$(function () {
+  $("#form-result").submit(function (e) {
+    e.preventDefault();
+    var can_submit = true;
+    if (checkName($("#name_of_team1").val()) == false) {
+      can_submit = false;
+      $("#name_of_team1").css("border", "3px solid red");
+    } else $("#name_of_team1").css("border", "1px solid #ccc");
+    if (checkName($("#name_of_team2").val()) == false) {
+      can_submit = false;
+      $("#name_of_team2").css("border", "3px solid red");
+    } else $("#name_of_team2").css("border", "1px solid #ccc");
+    if (checkName($("#stadium").val()) == false) {
+      can_submit = false;
+      $("#stadium").css("border", "3px solid red");
+    } else $("#stadium").css("border", "1px solid #ccc");
+
+    if (checkScore($("#score_of_team1").val()) == false) {
+      can_submit = false;
+      $("#score_of_team1").css("border", "3px solid red");
+    } else $("#score_of_team1").css("border", "1px solid #ccc");
+    if (checkScore($("#score_of_team2").val()) == false) {
+      can_submit = false;
+      $("#score_of_team2").css("border", "3px solid red");
+    } else $("#score_of_team2").css("border", "1px solid #ccc");
+
+    if (checkDate($("#date").val()) == false) {
+      can_submit = false;
+      $("#date").css("border", "3px solid red");
+    } else $("#date").css("border", "1px solid #ccc");
+
+    if (checkTime($("#time").val()) == false) {
+      can_submit = false;
+      $("#time").css("border", "3px solid red");
+    } else $("#time").css("border", "1px solid #ccc");
+
+    if (!can_submit) {
+      return;
+    }
+
+    const form = $(this);
+    const actionUrl = form.attr("action");
+    $.ajax({
+      type: "POST",
+      url: "/tournaments/match_result",
+      data: form.serialize(), // serializes the form's elements.
+      success: function (data) {
+        window.location.href = "/tournaments/match_result";
+      },
+    });  
+  });
+});
+
+function checkName(name) {
+  var regex_name =
+    /^[0-9a-zA-ZÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéêìíòóôõùúăđĩũơƯĂẠẢẤẦẨẪẬẮẰẲẴẶẸẺẼỀỀỂẾưăạảấầẩẫậắằẳẵặẹẻẽềềểếỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪễệỉịọỏốồổỗộớờởỡợụủứừỬỮỰỲỴÝỶỸửữựỳỵỷỹ\s\W|_]+$/;
+  return regex_name.test(name);
+}
+
+function checkEmail(email) {
+  var regex_email = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+  return regex_email.test(email);
+}
+
+function checkScore(score) {
+  var regex = /^[0-9]+$/;
+  return regex.test(score);
+}
+
+function checkTime(time) {
+  var regex_time = /^([01]?[0-9]|2[0-3]):[0-5][0-9]$/;
+  return regex_time.test(time);
+}
+
+function checkDate(date) {
+  var regex_date = /^\d{4}-\d\d-\d\d$/;
+  return regex_date.test(date);
+}
+
+function check_type_of_goal(type_of_goal) {
+  var regex_type_of_goal = /^[1-9]+$/;
+  return regex_type_of_goal.test(type_of_goal);
+}
+
+function check_time_of_goal(time_of_goal) {
+  var regex_time_of_goal = /^(12[0-0]|1[01][0-9]|[1-9]?[0-9])$/;
+  return regex_time_of_goal.test(time_of_goal);
+}
+
+
+var btn = document.querySelector(".btn__add");
+var table = document.querySelector(".rating-player__content");
+var count = 0;
+var max = 0;
+btn.addEventListener("click", function () {
+  count++;
+  console.log(count);
+  console.log(max);
+  var row = document.createElement("ul");
+  row.classList.add("table-row");
+  row.innerHTML = `
+    <ul class="rating-player__contenr-list row table-row no-gutters">
+    <li class="rating-player__contenr-item col col-mobile-1">${count}</li>
+    <li class=" rating-player__contenr-item col col-mobile-3">
+        <input class="form__input8" type="text" id="name_of_player"
+            name="name_of_player${count}" placeholder="Nhập tên cầu thủ">
+    </li>
+    <li class="rating-player__contenr-item col col-mobile-3">
+        <input class="form__input8" type="text" id="name_of_team"
+            name="name_team${count}" placeholder="Nhập tên đội">
+    </li>
+    <li class="rating-player__contenr-item col col-mobile-2">
+        <select class="form__input8" name="type_of_goal${count}" id="type_of_goal">
+            <option value="0">Chọn loại bàn thắng</option>
+            <option value="1">Bàn thắng bóng sống</option>
+            <option value="2">Bàn thắng đá phạt, phạt đền</option>
+            <option value="3">Bàn thắng phản lưới</option>
+        </select>
+    </li>
+    <li class="rating-player__contenr-item col col-mobile-3">
+        <input class="form__input9" type="text" id="time_of_goal"
+            name="time_of_goal${count}" placeholder="Nhập thời điểm">
+    </li>
+</ul>
+    `;
+  table.insertBefore(row, btn.parentNode.parentNode);
+});
+
+var btnRemove = document.querySelector(".btn__remove");
+btnRemove.addEventListener("click", function () {
+  if (count > 0) {
+    //delete the row next to the add button
+    table.removeChild(table.lastElementChild.previousElementSibling);
+    count--;
+  }
+});
+
+</script>

@@ -1,0 +1,195 @@
+<main id="main">
+  <!-- Trang dau tien -->
+  <div class="main__header" style ="background-image: none;">
+    <div class="main__header-overlay" style ="background-color: rgba(0,0,0,0);">
+    </div>
+    <!-- noi dung + dem nguoc ngay thi dau -->
+    <div class="header__container grid wide">
+      <div class="header__content">
+        <h1 class="header__content-title">V - League</h1>
+        <p class="header__content-description">Giải bóng đá quốc gia</p>
+        <div id="header__date-countdown"></div>
+        <a href="/tournaments/register" class="btn btn-primary">Tham gia</a>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- noi dung -->
+  <div class="main__container">
+    <div class="grid wide">
+      <div class="main__container-item row">
+        <div class="next-match col col-mobile-5">
+          <div class="table">
+            <header class="next-match__header table-header text-left">
+              <p class="next-match__header-text">Trận đấu tiếp theo</p>
+            </header>
+            <div class="next-match__content">
+              <div class="next-match__match">
+                <div class="next-match__team">
+                  <div class="next-match__team-logo">
+                    <img
+                      src="{{team1.logo}}"
+                      alt="logo team"
+                      class="next-match__team-logo-img"
+                    />
+                  </div>
+
+                  <p class="next-match__team-name">{{team1.name}}</p>
+                </div>
+                <p class="next-match__with">VS</p>
+                <div class="next-match__team">
+                  <div class="next-match__team-logo">
+
+                    <img
+                      src="{{team2.logo}}"
+                      alt="logo team"
+                      class="next-match__team-logo-img"
+                    />
+                  </div>
+                  <p class="next-match__team-name">{{team2.name}}</p>
+                </div>
+              </div>
+              <div class="next-match__Tournaments">
+                <p class="next-match__Tournaments-name">V-League</p>
+                <p class="next-match__Tournaments-time">{{schedule.date}}</p>
+                <p class="next-match__Tournaments-time"> {{schedule.time}} </p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <div class="rating-table col col-mobile-7">
+          <div class="grid">
+            <div class="table">
+              <header class="rating-table__header table-header">
+                <ul class="row no-gutters rating-table__header-list">
+                  <li
+                    class="rating-table__header-item col col-mobile-1"
+                  >Hạng</li>
+                  <li
+                    class="rating-table__header-item col col-mobile-6 text-left"
+                  >Đội</li>
+                  <li
+                    class="rating-table__header-item col col-mobile-1"
+                  >Thắng</li>
+                  <li
+                    class="rating-table__header-item col col-mobile-1"
+                  >Hòa</li>
+                  <li
+                    class="rating-table__header-item col col-mobile-1"
+                  >Thua</li>
+                  <li class="rating-table__header-item col col-mobile-1">Hiệu số</li>
+                  <li
+                    class="rating-table__header-item col col-mobile-1"
+                  >Điểm</li>
+
+                </ul>
+              </header>
+              <div class="rating-table__content">
+                {{#each teams}}
+                <ul class="row no-gutters rating-table__content-list table-row">
+                  <li class="rating-table__content-item col col-mobile-1">{{this.rank}}</li>
+                  <li
+                    class="rating-table__content-item col col-mobile-6 text-left"
+                  >{{this.name}}</li>
+                  <li
+                    class="rating-table__content-item col col-mobile-1"
+                  >{{this.win}}</li>
+                  <li class="rating-table__content-item col col-mobile-1">{{this.draw}}</li>
+                  <li class="rating-table__content-item col col-mobile-1">{{this.lose}}</li>
+                  <li
+                    class="rating-table__content-item col col-mobile-1"
+                  >{{this.goal_different}}</li>
+                  <li
+                    class="rating-table__content-item col col-mobile-1"
+                  >{{this.point}}</li>
+
+                </ul>
+                {{/each}}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="main__container-item row">
+        <div class="col col-mobile-12 grid">
+          <div class="rating-player table">
+            <header class="rating-player__header table-header">
+              <ul class="rating-player__header-list row no-gutters">
+                <li class="rating-player__header-item col col-mobile-1">
+                  <div class="rating-play__header-item-title">STT</div>
+                  <div class="rating-player__header-item-control">
+                    <i
+                      class="rating-player__header-item-control-icon fa-solid fa-angle-up"
+                    ></i>
+                    <i
+                      class="rating-player__header-item-control-icon fa-solid fa-angle-down"
+                    ></i>
+                  </div>
+                </li>
+                <li class="rating-player__header-item col col-mobile-3">
+                  <div class="rating-play__header-item-title">Tên cầu thủ</div>
+                  <div class="rating-player__header-item-control">
+                    <i
+                      class="rating-player__header-item-control-icon fa-solid fa-angle-up"
+                    ></i>
+                    <i
+                      class="rating-player__header-item-control-icon fa-solid fa-angle-down"
+                    ></i>
+                  </div>
+                </li>
+                <li class="rating-player__header-item col col-mobile-3">
+                  <div class="rating-play__header-item-title">Đội bóng</div>
+                  <div class="rating-player__header-item-control">
+                    <i
+                      class="rating-player__header-item-control-icon fa-solid fa-angle-up"
+                    ></i>
+                    <i
+                      class="rating-player__header-item-control-icon fa-solid fa-angle-down"
+                    ></i>
+                  </div>
+
+                </li>
+                <li class="rating-player__header-item col col-mobile-2">
+                  <div class="rating-play__header-item-title">Vị trí</div>
+                  <div class="rating-player__header-item-control">
+                    <i
+                      class="rating-player__header-item-control-icon fa-solid fa-angle-up"
+                    ></i>
+                    <i
+                      class="rating-player__header-item-control-icon fa-solid fa-angle-down"
+                    ></i>
+                  </div>
+                </li>
+                <li class="rating-player__header-item col col-mobile-3">
+                  <div class="rating-play__header-item-title">Tổng số bàn thắng</div>
+                  <div class="rating-player__header-item-control">
+                    <i
+                      class="rating-player__header-item-control-icon fa-solid fa-angle-up"
+                    ></i>
+                    <i
+                      class="rating-player__header-item-control-icon fa-solid fa-angle-down"
+                    ></i>
+                  </div>
+                </li>
+              </ul>
+            </header>
+            <div class="rating-player__content">
+              {{#each players}}
+              <ul class="rating-player__contenr-list row table-row no-gutters">
+                <li class="rating-player__contenr-item col col-mobile-1">{{this.stt}}</li>
+                <li class="rating-player__contenr-item col col-mobile-3">{{this.name}}</li>
+                <li class="rating-player__contenr-item col col-mobile-3">{{this.team}}</li>
+                <li class="rating-player__contenr-item col col-mobile-2">{{this.role}}</li>
+                <li class="rating-player__contenr-item col col-mobile-3">{{this.goal}}</li>
+              </ul>
+             {{/each}}
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</main>

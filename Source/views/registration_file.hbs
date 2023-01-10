@@ -1,0 +1,94 @@
+
+<!-- content -->
+<div class="main__content">
+    <div class="bg_2">
+        <h1>DANH SÁCH ĐỘI BÓNG</h1>
+        <div class="regis-file__container-item">
+            <div class="col col-mobile-12 grid">
+                <div class="rating-player table">
+                    <header class="rating-player__header table-header">
+                        <ul class="rating-player__header-list row no-gutters">
+                            <li class="rating-player__header-item col col-mobile-1">
+                                <div class="rating-play__header-item-title">STT</div>
+                                <div class="rating-player__header-item-control">
+                                    <i class="rating-player__header-item-control-icon fa-solid fa-angle-up"></i>
+                                    <i class="rating-player__header-item-control-icon fa-solid fa-angle-down"></i>
+                                </div>
+                            </li>
+                            <li class="rating-player__header-item col col-mobile-3">
+                                <div class="rating-play__header-item-title">Logo</div>
+                                <div class="rating-player__header-item-control">
+                                    <i class="rating-player__header-item-control-icon fa-solid fa-angle-up"></i>
+                                    <i class="rating-player__header-item-control-icon fa-solid fa-angle-down"></i>
+                                </div>
+                            </li>
+                            <li class="rating-player__header-item col col-mobile-3">
+                                <div class="rating-play__header-item-title">Tên Đội Bóng</div>
+                                <div class="rating-player__header-item-control">
+                                    <i class="rating-player__header-item-control-icon fa-solid fa-angle-up"></i>
+                                    <i class="rating-player__header-item-control-icon fa-solid fa-angle-down"></i>
+                                </div>
+
+                            </li>
+                            <li class="rating-player__header-item col col-mobile-2">
+                                <div class="rating-play__header-item-title">Sân Nhà</div>
+                                <div class="rating-player__header-item-control">
+                                    <i class="rating-player__header-item-control-icon fa-solid fa-angle-up"></i>
+                                    <i class="rating-player__header-item-control-icon fa-solid fa-angle-down"></i>
+                                </div>
+                            </li>
+                            <li class="rating-player__header-item col col-mobile-3">
+                                <div class="rating-play__header-item-title">Xem thêm</div>
+                                <div class="rating-player__header-item-control">
+                                    <i class="rating-player__header-item-control-icon fa-solid fa-angle-up"></i>
+                                    <i class="rating-player__header-item-control-icon fa-solid fa-angle-down"></i>
+                                </div>
+                            </li>
+                        </ul>
+                    </header>
+                    <div class="rating-player__content">
+                        {{#each teams}}
+                        <ul class="rating-player__contenr-list row table-row no-gutters">
+                            <li class="rating-player__contenr-item col col-mobile-1">{{this.id}}</li>
+
+                            <li class="rating-player__contenr-item col col-mobile-3 cell">
+                                <div class="logo-in-table">
+                                    <img src={{this.logo}} alt={{this.name}} />
+                                </div>
+                            </li>
+
+                            <li class="rating-player__contenr-item col col-mobile-3">{{this.name}}</li>
+                            <li class="rating-player__contenr-item col col-mobile-2">{{this.stadium}}</li>
+                            <li class="rating-player__contenr-item col col-mobile-3">
+                                <a class="view-profile"
+                                    href="/tournaments/registration_file/teaminfo?teamid={{this.id}}">Xem hồ sơ</a>
+                            </li>
+                        </ul>
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="pagination">
+            <ul class="pagination__list">
+                <li class="pagination__item">
+                    <a class="pagination__item-link" href="/tournaments/registration_file?page={{previousPage}}">
+                        <i class="fa-solid fa-angle-left"></i></a>
+                </li>
+                <li class="pagination__item">
+                    <a class="pagination__item-link pagination__item-link--active"
+                        href="/tournaments/registration_file?page={{page}}">
+                        {{page}}
+                    </a>
+                </li>
+                <li class="pagination__item">
+                    <a class="pagination__item-link" href="/tournaments/registration_file?page={{nextPage}}">
+                        <i class="fa-solid fa-angle-right"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</div>

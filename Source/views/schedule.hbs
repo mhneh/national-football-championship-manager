@@ -1,0 +1,111 @@
+<!-- phan lap lich giai dau-->
+<div class="schedule">
+    <div class="signup__bg"></div>
+    <div class="schedule__header">Lập lịch giải đấu</div>
+    <div class="schedule__content">
+        <div class="row">
+            <div class="col col-mobile-12 grid">
+                <div class="rating-player table schedule-table">
+                    <header class="rating-player__header table-header" style="border-radius:5px 5px 0px 0px;">
+                        <ul class="rating-player__header-list row  no-gutters">
+                            <li class="rating-player__header-item col col-mobile-1">
+                                <div class="rating-play__header-item-title">STT</div>
+                                <div class="rating-player__header-item-control">
+                                    <i class="rating-player__header-item-control-icon fa-solid fa-angle-up"></i>
+                                    <i class="rating-player__header-item-control-icon fa-solid fa-angle-down"></i>
+                                </div>
+                            </li>
+                            <li class="rating-player__header-item col col-mobile-3">
+                                <div class="rating-play__header-item-title">Đội 1</div>
+                                <div class="rating-player__header-item-control">
+                                    <i class="rating-player__header-item-control-icon fa-solid fa-angle-up"></i>
+                                    <i class="rating-player__header-item-control-icon fa-solid fa-angle-down"></i>
+                                </div>
+                            </li>
+                            <li class="rating-player__header-item col col-mobile-3">
+                                <div class="rating-play__header-item-title">Đội 2</div>
+                                <div class="rating-player__header-item-control">
+                                    <i class="rating-player__header-item-control-icon fa-solid fa-angle-up"></i>
+                                    <i class="rating-player__header-item-control-icon fa-solid fa-angle-down"></i>
+                                </div>
+
+                            </li>
+                            <li class="rating-player__header-item col col-mobile-3">
+                                <div class="rating-play__header-item-title">Sân</div>
+                                <div class="rating-player__header-item-control">
+                                    <i class="rating-player__header-item-control-icon fa-solid fa-angle-up"></i>
+                                    <i class="rating-player__header-item-control-icon fa-solid fa-angle-down"></i>
+                                </div>
+                            </li>
+                            <li class="rating-player__header-item col col-mobile-2">
+                                <div class="rating-play__header-item-title">Ngày giờ thi đấu</div>
+                                <div class="rating-player__header-item-control">
+                                    <i class="rating-player__header-item-control-icon fa-solid fa-angle-up"></i>
+                                    <i class="rating-player__header-item-control-icon fa-solid fa-angle-down"></i>
+                                </div>
+                            </li>
+                        </ul>
+                    </header>
+                    <div class="rating-player__content schedule-table-content">
+                        {{#each matches}}
+                        <ul class="rating-player__contenr-list row table-row no-gutters text-center">
+                            <li class="rating-player__contenr-item col col-mobile-1">{{this.id}}</li>
+                            <li class="rating-player__contenr-item col col-mobile-3">{{this.team1}}
+                            </li>
+                            <li class="rating-player__contenr-item col col-mobile-3">{{this.team2}}</li>
+                            <li class="rating-player__contenr-item col col-mobile-3">{{this.address}}</li>
+                            <li class="rating-player__contenr-item col col-mobile-2">{{this.datetime}}</li>
+                        </ul>
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pagination left schedule-table--paging">
+            <ul class="pagination__list">
+                <li class="pagination__item">
+                    <a class="pagination__item-link" href="/tournaments/schedule?page={{previousPage}}">
+                        <i class="fa-solid fa-angle-left"></i></a>
+                </li>
+                <li class="pagination__item">
+                    <a class="pagination__item-link pagination__item-link--active"
+                        href="/tournaments/schedule?page={{page}}">
+                        {{page}}
+                    </a>
+                </li>
+                <li class="pagination__item">
+                    <a class="pagination__item-link" href="/tournaments/schedule?page={{nextPage}}">
+                        <i class="fa-solid fa-angle-right"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="grp-btn">
+            <button class="schedule__content-btn add-btn" id="addmatch">&#x2B; Thêm trận đấu</button>
+            <button class="schedule__content-btn sub-btn" id="delmatch">&mdash; Xoá trận đấu</button>
+            <button class="schedule__content-btn edit-btn" id="editmatch">&#9998; Sửa trận đấu</button>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    $(function () {
+        $('#addmatch').click(function (e) {
+            e.preventDefault();
+            window.location.href = "/tournaments/schedule/addmatch";
+        })
+    })
+    $(function () {
+        $('#delmatch').click(function (e) {
+            e.preventDefault();
+            window.location.href = "/tournaments/schedule/delmatch";
+        })
+    })
+    $(function () {
+        $('#editmatch').click(function (e) {
+            e.preventDefault();
+            window.location.href = "/tournaments/schedule/editmatch";
+        })
+    })
+</script>

@@ -1,0 +1,71 @@
+:root {
+  --white-color: #fff;
+  --primary-color: #ee1e46;
+  --secondary-color: #16AD25;
+  --tertiary-color: #DCA102;
+}
+
+.main-heading {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--white-color);
+  padding-top: 20px;
+  padding-bottom: 0;
+  text-align: center;
+}
+
+.main-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--white-color);
+  padding-bottom: 0;
+}
+
+.primary-color {
+  color: var(--primary-color);
+}
+
+.bg-primary-color {
+  background-color: var(--primary-color);
+}
+
+.bg-secondary-color {
+  background-color: var(--secondary-color);
+}
+
+.bg-tertiary-color {
+  background-color: var(--tertiary-color);
+}
+
+.margin-auto {
+  margin: 0 auto;
+}
+
+.team-img {
+  width: 100px;
+  text-align: center;
+}
+
+.team-img__img {
+  width: 90%;
+}
+
+.team-img__name {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--white-color);
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.team-img__stadium {
+  font-weight: bold;
+  font-size: 18px;
+  color: var(--white-color);
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.remain-match__match{
+  margin-bottom: 16px;
+}

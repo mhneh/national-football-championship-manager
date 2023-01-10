@@ -1,0 +1,79 @@
+<!-- phan dang nhap -->
+<div class="login">
+    <img src="/assets/images/bg-login.jpg" class="login__img" alt="background">
+    <form class="login__form" id="form-login" method="post">
+        <div  class="login__items">
+            Tên đăng nhập
+        </div>
+        <input type="text" id="username" name="username" placeholder="Nhập tên đăng nhập" class="login__items-input" size="45">
+        <div class="login__notice" id="notice_username"> </div>
+        <div  class="login__items">
+            Mật khẩu
+        </div>
+        <input type="password" id="password" name="password" placeholder="Nhập mật khẩu" class="login__items-input" size="45">
+        <div class="login__notice" id="notice_password"></div>
+        <div class="login__hef">
+            <a href="#" title="Quên mật khẩu?" style="color: red;"> Quên mật khẩu?</a>
+            <a href="/auth/signup" title="Đăng ký" style="right: 100px; color: red;">Đăng ký</a>
+        </div>
+        <button type="submit" class="login__form-btn">Đăng nhập</button>
+    </form>
+</div>
+
+<script>
+    $("#form-login").submit(function (event) {
+        event.preventDefault();
+        const username = $("#username").val();
+        const password = $("#password").val();
+        let canSubmit = true;
+        if (checkUsername(username) == false) {
+            $("#notice_username").html("Username không được có khoảng trắng, chỉ gồm các kí tự, kí số và dấu _, không được bắt đầu bởi kí số.");
+            canSubmit = false
+        } else {
+          $("#notice_username").html("");
+        }
+
+        if (checkPassword(password) == false) {
+            $("#notice_password").html("Mật khẩu phải gồm ít nhất 6 kí tự.");
+            canSubmit = false
+        } else {
+          $("#notice_password").html("");
+        }
+
+        if (!canSubmit) {
+          return
+        }
+
+        const form = $(this);
+        const actionUrl = form.attr('action');
+        $.ajax({
+            type: "POST",
+            url: "/auth/login",
+            data: form.serialize(), // serializes the form's elements.
+            success: function(data) {
+                window.location.href = "/";
+            },
+            error: function(error) {
+                console.log(error);
+                if(error.responseText =="Tài khoản không tồn tại!")
+                $("#notice_username").text(error.responseText);
+                else
+                 $("#notice_password").text(error.responseText);
+
+            }
+        });
+    });
+    function checkUsername(str) {
+        let regex1 = /^[^0-9](\w){1,}$/;
+        let regex2 = /^[A-Za-z](\w){1,}$/;
+        let regex3 = /^[^0-9]$/;
+        let regex4 = /^[A-Za-z]$/;
+        return (
+                (regex1.test(str) && regex2.test(str)) ||
+                (regex3.test(str) && regex4.test(str))
+        );
+    }
+    function checkPassword(str) {
+        return (str.length >= 6);
+    }
+</script>

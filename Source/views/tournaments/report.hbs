@@ -1,0 +1,112 @@
+<div class="main-content">
+  <div class="background-blur">
+    <div class="main-heading">Lập báo cáo giải đấu</div>
+    <div class="search-form mb-0">
+      <div class="search-form__content">
+        <form action="#" class="search-form__form">
+          <div class="search-form__form-group">
+            <input
+              type="text"
+              class="search-form__form-input"
+              placeholder="Ngày (dd/mm/yyyy)"
+            />
+            <button class="search-form__form-btn">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="main-title" style="padding-left: 30px; margin-bottom: -30px;">
+      <span class="primary-color ms-5">BXH</span>
+      <span>|</span>
+      <a href="./player_goal" style="color: white; text-decoration: none">Danh sách các cầu thủ ghi bàn</a>
+    </div>
+    <div class="main__container-item row mt-4">
+      <div class="col col-mobile-11 grid margin-auto">
+        <div class="rating-player table font-size-16">
+          <header class="rating-player__header table-header rounded-top">
+            <ul class="rating-player__header-list row no-gutters font-size-16">
+              <li class="rating-player__header-item col col-mobile-1">
+                <div class="rating-play__header-item-title">Hạng</div>
+              </li>
+              <li class="rating-player__header-item col col-mobile-6">
+                <div class="rating-play__header-item-title">
+                  Đội bóng
+                </div>
+              </li>
+              <li class="rating-player__header-item col col-mobile-1">
+                <div class="rating-play__header-item-title">Thắng</div>
+              </li>
+              <li class="rating-player__header-item col col-mobile-1">
+                <div class="rating-play__header-item-title">Hòa</div>
+              </li>
+              <li class="rating-player__header-item col col-mobile-1">
+                <div class="rating-play__header-item-title">Thua</div>
+              </li>
+              <li class="rating-player__header-item col col-mobile-1">
+                <div class="rating-play__header-item-title">
+                  Hiệu số
+                </div>
+              </li>
+              <li class="rating-player__header-item col col-mobile-1">
+                <div class="rating-play__header-item-title">Điểm</div>
+              </li>
+            </ul>
+          </header>
+          <div class="rating-player__content">
+            {{#each teams}}
+              <ul class="rating-player__content-list row table-row no-gutters">
+                <li class="rating-player__content-item col col-mobile-1">
+                  {{this.rank}}
+                </li>
+                <li class="rating-player__content-item col col-mobile-6">
+                  {{this.name}}
+                </li>
+                <li class="rating-player__content-item col col-mobile-1">
+                  {{this.win}}
+                </li>
+                <li class="rating-player__content-item col col-mobile-1">
+                  {{this.draw}}
+                </li>
+                <li class="rating-player__content-item col col-mobile-1">
+                  {{this.lose}}
+                </li>
+                <li class="rating-player__content-item col col-mobile-1">
+                  {{this.goal_different}}
+                </li>
+                <li class="rating-player__content-item col col-mobile-1">
+                  {{this.point}}
+                </li>
+              </ul>
+            {{/each}}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pagination left">
+      <ul class="pagination__list" style="padding-left: 30px;">
+        <li class="pagination__item">
+          <a class="pagination__item-link pagination__item-link--no-click">
+            <i class="fa-solid fa-angle-left"></i></a>
+        </li>
+        <li class="pagination__item">
+          <a class="pagination__item-link pagination__item-link--active">01</a>
+        </li>
+        <li class="pagination__item">
+          <a class="pagination__item-link pagination__item-link--no-click"><i
+              class="fa-solid fa-angle-right"
+            ></i></a>
+        </li>
+      </ul>
+    </div>
+    <div
+      class="export d-flex justify-content-end mx-5"
+      style="display: flex; justify-content: flex-end; margin-right: 30px;"
+    >
+      <button type="button" class="search-form__form-btn bg-secondary-color">
+        Xuất báo cáo
+      </button>
+    </div>
+  </div>
+</div>

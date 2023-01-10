@@ -1,0 +1,275 @@
+<style>
+  .d-flex { display: flex !important; } .justify-content-end { justify-content:
+  flex-end !important; } .mx-5 { margin-right: 3rem !important; margin-left:
+  3rem !important; } .mt-4 { margin-top: 1.5rem !important; } .rounded-top {
+  border-top-left-radius: var(--bs-border-radius) !important;
+  border-top-right-radius: var(--bs-border-radius) !important; } .text-center {
+  text-align: center !important; } --bs-gutter-x: 1.5rem; .row { --bs-gutter-x:
+  1.5rem; --bs-gutter-y: 0; display: flex; flex-wrap: wrap; margin-top: calc(-1
+  * var(--bs-gutter-y)); margin-right: calc(-0.5 * var(--bs-gutter-x));
+  margin-left: calc(-0.5 * var(--bs-gutter-x)); } .col { flex: 1 0 0%; }
+
+  .update-item {
+    margin-left: 3px;
+    padding: 0 10px;
+  }
+  .confirm{
+    margin-top : 10px;
+    margin-left: 12px;
+  }
+
+  #cancel{
+    padding: 5px 10px;
+  }
+</style>
+
+<div class="main-content">
+  <div class="background-blur">
+
+    <div class="main__container-item row mt-4 d-flex">
+      <div class="team-img col col-mobile-3">
+        <img
+          src="{{team.logo}}"
+          alt="team-img"
+          class="team-img__img"
+        />
+        <div id = "team-name" class="team-img__name text-center">{{team.name}}</div>
+        <div class="team-img__stadium text-center">SÂN NHÀ: {{team.stadium}}</div>
+
+      </div>
+      <div class="col col-mobile-16 grid margin-auto">
+        <div class="rating-player table font-size-16" style="margin-top:25px">
+          <header class="rating-player__header table-header rounded-top">
+            <ul class="rating-player__header-list row no-gutters font-size-16">
+              <li class="rating-player__header-item col col-mobile-1">
+                <div class="rating-play__header-item-title">STT</div>
+                <div class="rating-player__header-item-control ps-2">
+                  <i
+                    class="rating-player__header-item-control-icon fa-solid fa-angle-up"
+                  ></i>
+                  <i
+                    class="rating-player__header-item-control-icon fa-solid fa-angle-down"
+                  ></i>
+                </div>
+              </li>
+              <li class="rating-player__header-item col col-mobile-3">
+                <div class="rating-play__header-item-title">
+                  Tên cầu thủ
+                </div>
+                <div class="rating-player__header-item-control">
+                  <i
+                    class="rating-player__header-item-control-icon fa-solid fa-angle-up"
+                  ></i>
+                  <i
+                    class="rating-player__header-item-control-icon fa-solid fa-angle-down"
+                  ></i>
+                </div>
+              </li>
+              <li class="rating-player__header-item col col-mobile-3">
+                <div class="rating-play__header-item-title">
+                  Ngày sinh
+                </div>
+                <div class="rating-player__header-item-control">
+                  <i
+                    class="rating-player__header-item-control-icon fa-solid fa-angle-up"
+                  ></i>
+                  <i
+                    class="rating-player__header-item-control-icon fa-solid fa-angle-down"
+                  ></i>
+                </div>
+              </li>
+              <li class="rating-player__header-item col col-mobile-2">
+                <div class="rating-play__header-item-title">Vị trí</div>
+                <div class="rating-player__header-item-control">
+                  <i
+                    class="rating-player__header-item-control-icon fa-solid fa-angle-up"
+                  ></i>
+                  <i
+                    class="rating-player__header-item-control-icon fa-solid fa-angle-down"
+                  ></i>
+                </div>
+              </li>
+              <li class="rating-player__header-item col col-mobile-2">
+                <div class="rating-play__header-item-title">
+                  Loại cầu thủ
+                </div>
+                <div class="rating-player__header-item-control">
+                  <i
+                    class="rating-player__header-item-control-icon fa-solid fa-angle-up"
+                  ></i>
+                  <i
+                    class="rating-player__header-item-control-icon fa-solid fa-angle-down"
+                  ></i>
+                </div>
+              </li>
+            </ul>
+          </header>
+          <div class="rating-player__content">
+            {{#each players}}
+            <ul class="rating-player__content-list row table-row no-gutters">
+              <li class="rating-player__content-item col col-mobile-1">
+                {{this.stt}}
+              </li>
+              <li class="rating-player__content-item col col-mobile-3">
+                {{this.name}}
+              </li>
+              <li class="rating-player__content-item col col-mobile-3">
+                {{this.birthday}}
+              </li>
+              <li class="rating-player__content-item col col-mobile-2">
+                {{this.role}}
+              </li>
+              <li class="rating-player__content-item col col-mobile-2">
+                {{this.type}}
+              </li>
+            </ul>
+            {{/each}}
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    
+    <div class="pagination left mx-5">
+      <ul class="pagination__list">
+        <li class="pagination__item">
+          <a class="pagination__item-link pagination__item-link--no-click">
+            <i class="fa-solid fa-angle-left"></i></a>
+        </li>
+        <li class="pagination__item">
+          <a class="pagination__item-link pagination__item-link--active">01</a>
+        </li>
+
+        <li class="pagination__item">
+          <a class="pagination__item-link pagination__item-link--no-click" ><i
+              class="fa-solid fa-angle-right"
+            ></i></a>
+        </li>
+      </ul>
+    </div>
+    <div id="update">
+
+    </div>
+    <div class="export d-flex justify-content-end mx-5">
+      <button id="add" type="button" class="search-form__form-btn bg-secondary-color">
+        <i class="fa-solid fa-plus"></i>
+        Thêm cầu thủ
+      </button>
+      <button id="remove" type="button" class="search-form__form-btn bg-primary-color">
+        <i class="fa-solid fa-minus"></i>
+        Xóa cầu thủ
+      </button>
+      <button id="modify" type="button" class="search-form__form-btn bg-tertiary-color">
+        <i class="fa-solid fa-pen-to-square"></i>
+        Sửa cầu thủ
+      </button>
+    </div>
+  </div>
+</div>
+
+<script>
+  const add = document.getElementById("add");
+  const remove = document.getElementById("remove");
+  const modify = document.getElementById("modify");
+  const table = document.getElementById("update");
+  const cancel = document.getElementById("cancel");
+  // get team nameq
+  const team_name = document.getElementById("team-name").innerHTML;
+  console.log(team_name);
+  // add 1 player to the list
+  add.addEventListener("click", () => {
+    table.innerHTML = `
+    <div class="">
+      <form method="POST" action="/teams/add">
+      <ul class="row no-gutters">
+        <li class="update-item">
+          <input type="text" class="form__input8" placeholder="Tên cầu thủ" name="update__name">
+        </li>
+        <li class="update-item">
+          <input type="date" class="form__input9" placeholder="Ngày sinh" name= "update__birth">
+        </li>
+        <li class="update-item">
+          <select class="form__input9" name= "update__role">
+            <option value="Tiền đạo">Tiền đạo</option>
+            <option value="Hậu vệ">Hậu vệ</option>
+            <option value="Thủ môn">Thủ môn</option>
+          </select>
+        </li>
+        <li class=" update-item">
+          <select class="form__input9" name ="update__type">
+            <option value="trong nước">trong nước</option>
+            <option value="ngoài nước">ngoài nước</option>
+          </select>
+        </li>
+        <li> 
+          <button type="submit" class="search-form__form-btn confirm bg-secondary-color">
+            <i class="fa-solid fa-check"></i>
+            Xác nhận
+          </button>
+        </li>
+         <li> 
+          <span id="cancel" onclick="remove_table()" class="search-form__form-btn confirm bg-tertiary-color">
+            <i class="fa-solid fa-times"></i>
+            Hủy
+          </span>
+          </li>
+
+        <input type="hidden" value="${team_name}" name="update__teamName">
+
+      </ul>
+      </form>
+    </div>
+    `;
+  });
+
+   remove.addEventListener("click", () => {
+    table.innerHTML = `
+    <div class="">
+      <form method="POST" action="/teams/remove">
+      <ul class="row no-gutters">
+        <li class="update-item">
+          <input type="text" class="form__input8" placeholder="Tên cầu thủ" name="update__name">
+        </li>
+        <li class="update-item">
+          <input type="date" class="form__input9" placeholder="Ngày sinh" name= "update__birth">
+        </li>
+        <li class="update-item">
+          <select class="form__input9" name= "update__role">
+            <option value="Tiền đạo">Tiền đạo</option>
+            <option value="Hậu vệ">Hậu vệ</option>
+            <option value="Thủ môn">Thủ môn</option>
+          </select>
+        </li>
+        <li class=" update-item">
+          <select class="form__input9" name ="update__type">
+            <option value="trong nước">trong nước</option>
+            <option value="ngoài nước">ngoài nước</option>
+          </select>
+        </li>
+        <li> 
+          <button type="submit" class="search-form__form-btn confirm bg-primary-color">
+            <i class="fa-solid fa-check"></i>
+            Xóa
+          </button>
+        </li>
+        <li> 
+          <span id="cancel" onclick="remove_table()" class="search-form__form-btn confirm bg-tertiary-color">
+            <i class="fa-solid fa-times"></i>
+            Hủy
+          </span>
+          </li>
+        <input type="hidden" value="${team_name}" name="update__teamName">
+      </ul>
+      </form>
+    </div>
+    `;
+  });
+
+  
+  function remove_table() {
+    table.innerHTML = "";
+  }
+  
+
+
+</script>
